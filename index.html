@@ -485,6 +485,9 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
 }
 .work-card-bg {
   width: 100%; height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
   transition: transform .7s var(--ease);
 }
 .work-card:hover .work-card-bg { transform: scale(1.04); }
@@ -516,13 +519,17 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
   letter-spacing: .01em;
 }
 
-/* Card colors */
-.card-film { background: linear-gradient(135deg, #16151A 0%, #23201A 60%, #16151A 100%); }
-.card-rah  { background: linear-gradient(150deg, #263238 0%, #37474F 100%); }
-.card-lm   { background: linear-gradient(150deg, #33403B 0%, #455A50 100%); }
-.card-st   { background: linear-gradient(150deg, #3E3830 0%, #544C42 100%); }
-.card-dec  { background: linear-gradient(150deg, #243430 0%, #3A524B 100%); }
-.card-blb  { background: linear-gradient(150deg, #1E2030 0%, #2C2E40 100%); }
+/* Card images */
+.work-card-bg {
+  background-size: cover;
+  background-position: center;
+}
+.card-film { background: #16151A; }
+.card-rah  { background: #263238; }
+.card-lm   { background: #33403B; }
+.card-st   { background: #3E3830; }
+.card-dec  { background: #243430; }
+.card-blb  { background: #1E2030; }
 
 /* ─── CLIENTS ─── */
 .clients {
@@ -574,9 +581,10 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
   position: relative;
   overflow: hidden;
 }
-.about-portrait-fill {
+.about-portrait-img {
   width: 100%; height: 100%;
-  background: linear-gradient(155deg, #C4B49A 0%, #8B7D65 50%, #6B5D48 100%);
+  object-fit: cover;
+  display: block;
 }
 .about-portrait::after {
   content: '';
@@ -647,9 +655,17 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
   position: relative;
   overflow: hidden;
 }
-.film-visual-fill {
+.film-visual-img {
   width: 100%; height: 100%;
-  background: linear-gradient(135deg, #151518 0%, #252018 50%, #151518 100%);
+  object-fit: cover;
+  display: block;
+}
+.film-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(15,14,12,.3);
+  z-index: 1;
+  pointer-events: none;
 }
 .film-visual::after {
   content: '';
@@ -659,8 +675,9 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
   width: 64px; height: 64px;
   border-radius: 50%;
   border: 1.5px solid rgba(184,151,90,.6);
-  background: rgba(184,151,90,.12);
+  background: rgba(184,151,90,.15);
   backdrop-filter: blur(4px);
+  z-index: 2;
 }
 .film-visual .play-icon {
   position: absolute;
@@ -670,7 +687,7 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
   border-style: solid;
   border-width: 8px 0 8px 14px;
   border-color: transparent transparent transparent var(--gold);
-  z-index: 1;
+  z-index: 3;
 }
 .film .label { color: var(--gold); }
 .film .section-head { color: var(--cream); margin-bottom: 1.4rem; }
@@ -947,43 +964,43 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
     <a href="#" class="btn btn--outline-dark reveal reveal-delay-2">View All</a>
   </div>
   <div class="work-grid">
-    <div class="work-card work-card--wide reveal">
-      <div class="work-card-bg card-film"></div>
+    <div class="work-card work-card--wide card-film reveal">
+      <img class="work-card-bg" src="https://images.unsplash.com/photo-1540228294755-ba7db9385b06?w=1200&q=80&fit=crop" alt="They Fight With Cameras" loading="lazy" />
       <div class="work-card-overlay">
         <span class="card-sector">Film · Art Direction</span>
         <h4>They Fight With Cameras</h4>
       </div>
     </div>
-    <div class="work-card reveal reveal-delay-1">
-      <div class="work-card-bg card-rah"></div>
+    <div class="work-card card-rah reveal reveal-delay-1">
+      <img class="work-card-bg" src="https://images.unsplash.com/photo-1587834576560-847ac477396c?w=800&q=80&fit=crop" alt="Radiologie Ahrensburg" loading="lazy" />
       <div class="work-card-overlay">
         <span class="card-sector">Healthcare · Brand Sprint</span>
         <h4>Radiologie Ahrensburg</h4>
       </div>
     </div>
-    <div class="work-card reveal reveal-delay-1">
-      <div class="work-card-bg card-lm"></div>
+    <div class="work-card card-lm reveal reveal-delay-1">
+      <img class="work-card-bg" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=80&fit=crop" alt="LM Alltagshilfe" loading="lazy" />
       <div class="work-card-overlay">
         <span class="card-sector">Care Services · Brand Sprint</span>
         <h4>LM Alltagshilfe</h4>
       </div>
     </div>
-    <div class="work-card reveal reveal-delay-2">
-      <div class="work-card-bg card-st"></div>
+    <div class="work-card card-st reveal reveal-delay-2">
+      <img class="work-card-bg" src="https://images.unsplash.com/photo-1631194019419-89ef6ec875db?w=800&q=80&fit=crop" alt="Steent" loading="lazy" />
       <div class="work-card-overlay">
         <span class="card-sector">Consulting · Brand Sprint</span>
         <h4>Steent</h4>
       </div>
     </div>
-    <div class="work-card reveal reveal-delay-2">
-      <div class="work-card-bg card-dec"></div>
+    <div class="work-card card-dec reveal reveal-delay-2">
+      <img class="work-card-bg" src="https://images.unsplash.com/photo-1691250203539-bce8615d5652?w=800&q=80&fit=crop" alt="Decarbonaid" loading="lazy" />
       <div class="work-card-overlay">
         <span class="card-sector">Sustainability · Brand Identity</span>
         <h4>Decarbonaid</h4>
       </div>
     </div>
-    <div class="work-card reveal reveal-delay-3">
-      <div class="work-card-bg card-blb"></div>
+    <div class="work-card card-blb reveal reveal-delay-3">
+      <img class="work-card-bg" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&fit=crop" alt="Blablador" loading="lazy" />
       <div class="work-card-overlay">
         <span class="card-sector">AI · Visual Identity</span>
         <h4>Blablador</h4>
@@ -1013,7 +1030,7 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
 <section class="about" id="about">
   <div class="about-inner">
     <div class="about-portrait reveal">
-      <div class="about-portrait-fill"></div>
+      <img class="about-portrait-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&fit=crop&crop=faces" alt="Joniel da Silva" loading="lazy" />
     </div>
     <div class="about-content">
       <p class="label reveal">About</p>
@@ -1037,7 +1054,7 @@ section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
 <section class="film">
   <div class="film-inner">
     <div class="film-visual reveal">
-      <div class="film-visual-fill"></div>
+      <img class="film-visual-img" src="https://images.unsplash.com/photo-1596913799408-19ff77c6feae?w=1200&q=80&fit=crop" alt="They Fight With Cameras — Documentary" loading="lazy" />
       <div class="play-icon"></div>
     </div>
     <div>
