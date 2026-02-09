@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joniel da Silva — Brand Sprint & Creative Direction</title>
+<meta name="description" content="Strategic branding for founder-led businesses. Brand Sprint, Creative Direction, Visual Identity. Hamburg, Germany." />
+<meta name="theme-color" content="#0F0E0C" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   JONIEL DA SILVA — Brand Sprint & Creative Direction
+   Premium single-page website
+   Fonts: Futura (system fallback), Cormorant Garamond
+   ═══════════════════════════════════════════════ */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0F0E0C;
+  --bg-warm:  #F5F0E8;
+  --bg-off:   #EDE7DC;
+  --ink:      #0F0E0C;
+  --ink-80:   rgba(15,14,12,.8);
+  --ink-50:   rgba(15,14,12,.5);
+  --ink-25:   rgba(15,14,12,.25);
+  --ink-12:   rgba(15,14,12,.12);
+  --cream:    #F5F0E8;
+  --white:    #FDFBF7;
+  --gold:     #B8975A;
+  --gold-dim: #967740;
+  --gold-10:  rgba(184,151,90,.1);
+
+  --serif:  'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  --sans:   'Futura', 'Century Gothic', 'Trebuchet MS', 'Helvetica Neue', 'Arial', sans-serif;
+
+  --nav-h: 72px;
+  --ease:  cubic-bezier(.25, .1, .25, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── UTILITY ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s var(--ease), transform .8s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .4s, backdrop-filter .4s;
+}
+.nav.scrolled {
+  background: rgba(15,14,12,.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.nav-logo {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: .8rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--cream);
+  transition: color .3s;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.6rem;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.5);
+  transition: color .3s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width .4s var(--ease);
+}
+.nav-links a:hover { color: var(--cream); }
+.nav-links a:hover::after { width: 100%; }
+
+/* Mobile menu */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  z-index: 1001;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--cream);
+  position: absolute;
+  left: 0;
+  transition: transform .3s, opacity .3s;
+}
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.nav-toggle span:nth-child(3) { bottom: 0; }
+.nav-toggle.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem) clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 70% 30%, rgba(184,151,90,.06) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 35% at 15% 65%, rgba(184,151,90,.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+/* Subtle grain texture */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+
+.hero-tag {
+  font-family: var(--sans);
+  font-size: .6rem;
+  font-weight: 500;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroIn .9s .3s var(--ease-out) forwards;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(3.2rem, 8vw, 8rem);
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--cream);
+  max-width: 850px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroIn .9s .45s var(--ease-out) forwards;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-sub {
+  margin-top: 2.4rem;
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: 1.8;
+  color: rgba(245,240,232,.4);
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroIn .9s .6s var(--ease-out) forwards;
+}
+.hero-scroll {
+  position: absolute;
+  bottom: clamp(2rem, 4vw, 3rem);
+  right: clamp(1.5rem, 4vw, 3.5rem);
+  font-family: var(--sans);
+  font-size: .55rem;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.2);
+  writing-mode: vertical-rl;
+  z-index: 1;
+  opacity: 0;
+  animation: heroIn .9s .8s var(--ease-out) forwards;
+}
+.hero-scroll::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: rgba(245,240,232,.15);
+  margin: 0 auto 12px;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes heroIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); opacity: .15; }
+  50% { transform: scaleY(.4); opacity: .4; }
+}
+
+/* ─── SECTION PRIMITIVES ─── */
+section { padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 4vw, 3.5rem); }
+
+.label {
+  font-family: var(--sans);
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.6rem;
+}
+.section-head {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+}
+
+/* ─── WHAT I DO ─── */
+.what-section {
+  background: var(--bg-warm);
+}
+.what {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+.what-left .section-head {
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+.what-left p {
+  font-size: .88rem;
+  line-height: 1.85;
+  color: var(--ink-50);
+  max-width: 460px;
+  letter-spacing: .01em;
+}
+.what-right { padding-top: 1rem; }
+.service-item {
+  border-top: 1px solid var(--ink-12);
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  cursor: default;
+  transition: padding-left .4s var(--ease);
+}
+.service-item:last-child { border-bottom: 1px solid var(--ink-12); }
+.service-item:hover { padding-left: .8rem; }
+.service-item h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: .01em;
+  color: var(--ink);
+}
+.service-item span {
+  font-family: var(--sans);
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-25);
+  white-space: nowrap;
+}
+
+/* ─── BRAND SPRINT ─── */
+.sprint {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.sprint::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: .03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+.sprint-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.sprint .label { color: var(--gold); }
+.sprint .section-head { color: var(--cream); margin-bottom: 1.8rem; }
+.sprint-desc {
+  font-size: .88rem;
+  line-height: 1.85;
+  color: rgba(245,240,232,.4);
+  margin-bottom: 2.8rem;
+  letter-spacing: .01em;
+}
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .6rem;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 1rem 2.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background .3s, transform .2s, box-shadow .3s;
+}
+.btn:hover {
+  background: var(--gold-dim);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(184,151,90,.2);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(245,240,232,.2);
+}
+.btn--outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: transparent;
+  box-shadow: none;
+}
+.btn--outline-dark {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink-25);
+}
+.btn--outline-dark:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: transparent;
+  box-shadow: none;
+}
+
+.sprint-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.phase {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid rgba(245,240,232,.06);
+}
+.phase:first-child { border-top: 1px solid rgba(245,240,232,.06); }
+.phase-num {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+.phase h4 {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: .4rem;
+  letter-spacing: .06em;
+}
+.phase p {
+  font-size: .78rem;
+  line-height: 1.6;
+  color: rgba(245,240,232,.35);
+  letter-spacing: .01em;
+}
+
+/* ─── SELECTED WORK ─── */
+.work-section { background: var(--bg-warm); }
+.work-header {
+  max-width: 1140px;
+  margin: 0 auto 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.work-header .section-head { color: var(--ink); }
+.work-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.work-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3.2;
+  cursor: pointer;
+}
+.work-card--wide {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+.work-card-bg {
+  width: 100%; height: 100%;
+  transition: transform .7s var(--ease);
+}
+.work-card:hover .work-card-bg { transform: scale(1.04); }
+.work-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(15,14,12,.8) 0%, rgba(15,14,12,.1) 45%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8rem;
+  opacity: 0;
+  transition: opacity .5s var(--ease);
+}
+.work-card:hover .work-card-overlay { opacity: 1; }
+.work-card-overlay .card-sector {
+  font-family: var(--sans);
+  font-size: .52rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.work-card-overlay h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--cream);
+  letter-spacing: .01em;
+}
+
+/* Card colors */
+.card-film { background: linear-gradient(135deg, #16151A 0%, #23201A 60%, #16151A 100%); }
+.card-rah  { background: linear-gradient(150deg, #263238 0%, #37474F 100%); }
+.card-lm   { background: linear-gradient(150deg, #33403B 0%, #455A50 100%); }
+.card-st   { background: linear-gradient(150deg, #3E3830 0%, #544C42 100%); }
+.card-dec  { background: linear-gradient(150deg, #243430 0%, #3A524B 100%); }
+.card-blb  { background: linear-gradient(150deg, #1E2030 0%, #2C2E40 100%); }
+
+/* ─── CLIENTS ─── */
+.clients {
+  background: var(--bg);
+  padding: clamp(4rem, 7vw, 5.5rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  position: relative;
+}
+.clients .label {
+  color: rgba(245,240,232,.2);
+  margin-bottom: 2.4rem;
+}
+.clients-row {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8rem 4rem;
+}
+.clients-row span {
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.18);
+  transition: color .3s;
+}
+.clients-row span:hover { color: var(--gold); }
+
+/* ─── ABOUT ─── */
+.about {
+  background: var(--white);
+}
+.about-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+.about-portrait {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-off);
+  position: relative;
+  overflow: hidden;
+}
+.about-portrait-fill {
+  width: 100%; height: 100%;
+  background: linear-gradient(155deg, #C4B49A 0%, #8B7D65 50%, #6B5D48 100%);
+}
+.about-portrait::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(165deg, transparent 50%, rgba(15,14,12,.15));
+}
+.about-content .label { color: var(--gold); margin-bottom: 1.2rem; }
+.about-content .section-head {
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+.about-content p {
+  font-size: .88rem;
+  line-height: 1.9;
+  color: var(--ink-50);
+  margin-bottom: 1.4rem;
+  letter-spacing: .01em;
+}
+.about-content p strong { color: var(--ink-80); font-weight: 500; }
+.about-content p em { font-style: italic; }
+.about-tags {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.about-tags span {
+  font-family: var(--sans);
+  font-size: .55rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  border: 1px solid var(--ink-12);
+  padding: .55rem 1.1rem;
+  color: var(--ink-50);
+  transition: border-color .3s, color .3s;
+}
+.about-tags span:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ─── FILM ─── */
+.film {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+.film::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse 65% 55% at 30% 50%, rgba(184,151,90,.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.film-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.film-visual {
+  aspect-ratio: 16/10;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+.film-visual-fill {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #151518 0%, #252018 50%, #151518 100%);
+}
+.film-visual::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(184,151,90,.6);
+  background: rgba(184,151,90,.12);
+  backdrop-filter: blur(4px);
+}
+.film-visual .play-icon {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-45%, -50%);
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 14px;
+  border-color: transparent transparent transparent var(--gold);
+  z-index: 1;
+}
+.film .label { color: var(--gold); }
+.film .section-head { color: var(--cream); margin-bottom: 1.4rem; }
+.film-text {
+  font-size: .86rem;
+  line-height: 1.85;
+  color: rgba(245,240,232,.4);
+  margin-bottom: 2rem;
+  letter-spacing: .01em;
+}
+.film-meta {
+  display: flex;
+  gap: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+.film-meta-item span {
+  display: block;
+  font-family: var(--sans);
+  font-size: .5rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.25);
+  margin-bottom: .35rem;
+}
+.film-meta-item strong {
+  font-family: var(--serif);
+  font-size: .95rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+/* ─── CONTACT ─── */
+.contact {
+  background: var(--bg-warm);
+  text-align: center;
+  padding: clamp(6rem, 12vw, 10rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+.contact .label { color: var(--gold); margin-bottom: 1.4rem; }
+.contact .section-head {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  color: var(--ink);
+}
+.contact-desc {
+  font-size: .88rem;
+  color: var(--ink-50);
+  max-width: 440px;
+  margin: 0 auto 3rem;
+  line-height: 1.85;
+  letter-spacing: .01em;
+}
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.contact .btn {
+  color: var(--cream);
+  background: var(--ink);
+}
+.contact .btn:hover {
+  background: #2a2820;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--bg);
+  padding: 2.2rem clamp(1.5rem, 4vw, 3.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(245,240,232,.06);
+}
+.footer-logo {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.25);
+}
+.footer-copy {
+  font-family: var(--sans);
+  font-size: .62rem;
+  letter-spacing: .06em;
+  color: rgba(245,240,232,.15);
+}
+
+/* ─── HORIZONTAL RULE ─── */
+.divider {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 1px;
+  background: var(--ink-12);
+  border: none;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .what,
+  .sprint-inner,
+  .about-inner,
+  .film-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .work-card--wide { grid-column: span 2; }
+  .work-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .about-portrait {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root { --nav-h: 60px; }
+
+  .nav-links {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15,14,12,.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+  }
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .nav-links a {
+    font-size: .85rem;
+    letter-spacing: .3em;
+    color: var(--cream);
+  }
+  .nav-toggle { display: block; }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-card--wide { grid-column: span 1; }
+  .work-card { aspect-ratio: 4/3; }
+
+  .clients-row { gap: 1.8rem 2.4rem; }
+  .clients-row span { font-size: .58rem; }
+
+  .film-meta { gap: 1.8rem; }
+
+  .footer {
+    flex-direction: column;
+    gap: .8rem;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <a href="#" class="nav-logo">Joniel da Silva</a>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#sprint">Sprint</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <p class="hero-tag">Brand Sprint &amp; Creative Direction</p>
+  <h1>From chaos<br>to <em>shape.</em></h1>
+  <p class="hero-sub">I give founder-led businesses a coherent strategic brand in 4–6 weeks. Editorial clarity. Lasting form. No generic frameworks.</p>
+  <span class="hero-scroll">Scroll</span>
+</section>
+
+<!-- ═══ WHAT I DO ═══ -->
+<section class="what-section">
+  <div class="what">
+    <div class="what-left">
+      <p class="label reveal">What I Do</p>
+      <h2 class="section-head reveal reveal-delay-1">Strategic branding at the intersection of discipline and creative instinct.</h2>
+      <p class="reveal reveal-delay-2">I work with founders who have strong intuition but scattered expression. The goal is never to simplify — it's to organise with care, and leave room for what comes next.</p>
+    </div>
+    <div class="what-right">
+      <div class="service-item reveal">
+        <h3>Brand Sprint</h3>
+        <span>4–6 Weeks</span>
+      </div>
+      <div class="service-item reveal reveal-delay-1">
+        <h3>Creative Direction</h3>
+        <span>Film &amp; Campaign</span>
+      </div>
+      <div class="service-item reveal reveal-delay-2">
+        <h3>Visual Identity</h3>
+        <span>Systems &amp; Rollout</span>
+      </div>
+      <div class="service-item reveal reveal-delay-3">
+        <h3>Fine Art</h3>
+        <span>Watercolour &amp; Print</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BRAND SPRINT ═══ -->
+<section class="sprint" id="sprint">
+  <div class="sprint-inner">
+    <div>
+      <p class="label reveal">The Brand Sprint</p>
+      <h2 class="section-head reveal reveal-delay-1">A focused process.<br>A lasting result.</h2>
+      <p class="sprint-desc reveal reveal-delay-2">Most businesses arrive with good instincts and no clear shape. The Brand Sprint distils what already exists into a strategic foundation — coherent narrative, clear positioning, a visible horizon for growth.</p>
+      <a href="#contact" class="btn reveal reveal-delay-3">Start a conversation</a>
+    </div>
+    <div class="sprint-phases">
+      <div class="phase reveal">
+        <span class="phase-num">1</span>
+        <div>
+          <h4>Listening &amp; Extraction</h4>
+          <p>Deep conversations. Pattern recognition. Separating noise from what truly matters.</p>
+        </div>
+      </div>
+      <div class="phase reveal reveal-delay-1">
+        <span class="phase-num">2</span>
+        <div>
+          <h4>Synthesis &amp; Direction</h4>
+          <p>Define the core tension. Articulate what the brand is — and what it refuses to be.</p>
+        </div>
+      </div>
+      <div class="phase reveal reveal-delay-2">
+        <span class="phase-num">3</span>
+        <div>
+          <h4>Shaping the Core</h4>
+          <p>Translate direction into narrative, tone, and visual logic. Fewer, stronger decisions.</p>
+        </div>
+      </div>
+      <div class="phase reveal reveal-delay-3">
+        <span class="phase-num">4</span>
+        <div>
+          <h4>Consolidation &amp; Horizon</h4>
+          <p>A shared system that enables confident decisions and makes the future actionable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SELECTED WORK ═══ -->
+<section class="work-section" id="work">
+  <div class="work-header">
+    <div>
+      <p class="label reveal">Selected Work</p>
+      <h2 class="section-head reveal reveal-delay-1">Recent projects &amp; brand sprints</h2>
+    </div>
+    <a href="#" class="btn btn--outline-dark reveal reveal-delay-2">View All</a>
+  </div>
+  <div class="work-grid">
+    <div class="work-card work-card--wide reveal">
+      <div class="work-card-bg card-film"></div>
+      <div class="work-card-overlay">
+        <span class="card-sector">Film · Art Direction</span>
+        <h4>They Fight With Cameras</h4>
+      </div>
+    </div>
+    <div class="work-card reveal reveal-delay-1">
+      <div class="work-card-bg card-rah"></div>
+      <div class="work-card-overlay">
+        <span class="card-sector">Healthcare · Brand Sprint</span>
+        <h4>Radiologie Ahrensburg</h4>
+      </div>
+    </div>
+    <div class="work-card reveal reveal-delay-1">
+      <div class="work-card-bg card-lm"></div>
+      <div class="work-card-overlay">
+        <span class="card-sector">Care Services · Brand Sprint</span>
+        <h4>LM Alltagshilfe</h4>
+      </div>
+    </div>
+    <div class="work-card reveal reveal-delay-2">
+      <div class="work-card-bg card-st"></div>
+      <div class="work-card-overlay">
+        <span class="card-sector">Consulting · Brand Sprint</span>
+        <h4>Steent</h4>
+      </div>
+    </div>
+    <div class="work-card reveal reveal-delay-2">
+      <div class="work-card-bg card-dec"></div>
+      <div class="work-card-overlay">
+        <span class="card-sector">Sustainability · Brand Identity</span>
+        <h4>Decarbonaid</h4>
+      </div>
+    </div>
+    <div class="work-card reveal reveal-delay-3">
+      <div class="work-card-bg card-blb"></div>
+      <div class="work-card-overlay">
+        <span class="card-sector">AI · Visual Identity</span>
+        <h4>Blablador</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLIENTS ═══ -->
+<section class="clients">
+  <p class="label reveal">Trusted By</p>
+  <div class="clients-row reveal reveal-delay-1">
+    <span>Qatar Airways</span>
+    <span>Montblanc</span>
+    <span>Dentsu</span>
+    <span>A. Lange &amp; Söhne</span>
+    <span>Graf von Faber-Castell</span>
+    <span>Swarovski</span>
+    <span>Ferrero</span>
+    <span>Nivea</span>
+    <span>Voltaren</span>
+    <span>Generali</span>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-portrait reveal">
+      <div class="about-portrait-fill"></div>
+    </div>
+    <div class="about-content">
+      <p class="label reveal">About</p>
+      <h2 class="section-head reveal reveal-delay-1">A creative strategist who works at the edge of brand, film, and fine art.</h2>
+      <p class="reveal reveal-delay-2">Born in Salvador, Brazil. Based in Hamburg. Over two decades working with global brands — from Qatar Airways and Montblanc to small founder-led businesses that needed clarity more than polish.</p>
+      <p class="reveal reveal-delay-2">In the last year I developed the <strong>Brand Sprint</strong>: a focused 4–6 week process that transforms scattered ideas into a coherent strategic shape. I also serve as Art Director for Daedalus Productions on <em>They Fight With Cameras</em>, a documentary in production.</p>
+      <p class="reveal reveal-delay-3">The thread across everything: editorial restraint. Form that doesn't limit — it unlocks.</p>
+      <div class="about-tags reveal reveal-delay-3">
+        <span>Brand Strategy</span>
+        <span>Creative Direction</span>
+        <span>Visual Identity</span>
+        <span>Film</span>
+        <span>Fine Art</span>
+        <span>Watercolour</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FILM ═══ -->
+<section class="film">
+  <div class="film-inner">
+    <div class="film-visual reveal">
+      <div class="film-visual-fill"></div>
+      <div class="play-icon"></div>
+    </div>
+    <div>
+      <p class="label reveal">In Production</p>
+      <h2 class="section-head reveal reveal-delay-1">They Fight<br>With Cameras</h2>
+      <p class="film-text reveal reveal-delay-2">A documentary about the war photographers who shaped how we see conflict. I serve as Art Director for Daedalus Productions — leading the visual language of the campaign.</p>
+      <div class="film-meta reveal reveal-delay-2">
+        <div class="film-meta-item">
+          <span>Role</span>
+          <strong>Art Director</strong>
+        </div>
+        <div class="film-meta-item">
+          <span>Studio</span>
+          <strong>Daedalus</strong>
+        </div>
+        <div class="film-meta-item">
+          <span>Status</span>
+          <strong>In Production</strong>
+        </div>
+      </div>
+      <a href="https://theyfightwithcameras.com" class="btn btn--outline reveal reveal-delay-3" target="_blank" rel="noopener">Visit Site</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="contact">
+  <p class="label reveal">Let's Talk</p>
+  <h2 class="section-head reveal reveal-delay-1">Ready to give your brand a shape?</h2>
+  <p class="contact-desc reveal reveal-delay-2">I take on a limited number of Brand Sprints each year. If your business has strong instincts but unclear expression — let's start a conversation.</p>
+  <div class="contact-actions reveal reveal-delay-3">
+    <a href="mailto:joniel@jonieldasilva.com" class="btn">Email Me</a>
+    <a href="https://linkedin.com/in/jonieldasilva" class="btn btn--outline-dark" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <span class="footer-logo">Joniel da Silva</span>
+  <span class="footer-copy">&copy; 2026 Joniel da Silva. Hamburg, Germany.</span>
+</footer>
+
+<!-- ═══ JS ═══ -->
+<script>
+(function() {
+  'use strict';
+
+  // Nav scroll state
+  const nav = document.querySelector('.nav');
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      toggle.classList.toggle('active');
+      links.classList.toggle('open');
+      document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        toggle.classList.remove('active');
+        links.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Scroll reveal with IntersectionObserver
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function(el) { observer.observe(el); });
+  } else {
+    reveals.forEach(function(el) { el.classList.add('visible'); });
+  }
+
+  // Smooth anchor scrolling with nav offset
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
