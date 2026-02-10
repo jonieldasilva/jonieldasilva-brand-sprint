@@ -148,9 +148,9 @@ Label: Let's Talk
 Heading: Ready to give your brand a shape?
 Description: I take on a limited number of Brand Sprints each year. If your business has strong instincts but unclear expression -- let's start a conversation.
 Button 1 Text: Email Me
-Button 1 URL: mailto:joniel@jonieldasilva.com
+Button 1 URL: mailto:studio@jonieldasilva.com
 Button 2 Text: LinkedIn
-Button 2 URL: https://linkedin.com/in/jonieldasilva
+Button 2 URL: https://linkedin.com/in/joniel
 
 SECTION: Footer
 ---
@@ -478,7 +478,7 @@ Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
 ################################################################################
 ##                                                                            ##
 ##  PAGE 6: CASE STUDY -- Steen Digital                                        ##
-##  File: work/steent.html                                                    ##
+##  File: work/steen.html                                                    ##
 ##                                                                            ##
 ################################################################################
 
