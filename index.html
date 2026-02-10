@@ -583,11 +583,12 @@ img { display: block; max-width: 100%; }
 }
 .client-item span {
   font-family: var(--futura);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--gray-light);
+  word-break: break-word;
 }
 .client-item:hover span {
   color: var(--white);
@@ -797,8 +798,21 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.05em;
   color: var(--white);
 }
+.footer-links {
+  display: flex;
+  gap: calc(var(--unit) * 3);
+  align-items: center;
+}
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
 .footer-copy {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--gray-mid);
 }
 
@@ -1141,7 +1155,7 @@ img { display: block; max-width: 100%; }
   <p class="contact-desc">I take on a limited number of Brand Sprints each year. If your business has strong instincts but unclear expression — let's start a conversation.</p>
   <div class="contact-actions">
     <a href="mailto:joniel@jonieldasilva.com" class="btn-white">Email Me</a>
-    <a href="https://linkedin.com/in/jonieldasilva" class="btn-white-outline" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/joniel/" class="btn-white-outline" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </section>
 
@@ -1149,6 +1163,10 @@ img { display: block; max-width: 100%; }
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-logo">Joniel da Silva</span>
+    <div class="footer-links">
+      <a href="/imprint.html">Imprint</a>
+      <a href="/data-policy.html">Data Policy</a>
+    </div>
     <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
   </div>
 </footer>

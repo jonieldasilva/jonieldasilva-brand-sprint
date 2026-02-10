@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Imprint — Joniel da Silva</title>
+<meta name="description" content="Legal information and imprint for Joniel da Silva Brand Sprint & Creative Direction." />
+<meta name="theme-color" content="#000000" />
+<style>
+/* ═══════════════════════════════════════════════
+   JONIEL DA SILVA — BAUHAUS DARK MODERNIST
+   Legal Page
+   ═══════════════════════════════════════════════ */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:      #000000;
+  --white:      #FFFFFF;
+  --dark-bg:    #0A0A0A;
+  --dark-card:  #141414;
+  --gray-dark:  #1F1F1F;
+  --gray-mid:   #666666;
+  --gray-light: #999999;
+  --accent:     #D32F2F;
+
+  --futura: 'Futura', 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif;
+
+  --unit: 8px;
+  --grid-gap: calc(var(--unit) * 3);
+  --nav-h: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--futura);
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: var(--nav-h);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+.nav-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: calc(var(--unit) * 5);
+  justify-content: center;
+}
+.nav-links a {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-light);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-cta {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--white);
+  padding: calc(var(--unit) * 2) calc(var(--unit) * 4);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.nav-toggle {
+  display: none;
+}
+
+/* ─── CONTENT ─── */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + calc(var(--unit) * 12)) var(--grid-gap) calc(var(--unit) * 12);
+}
+.content h1 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: calc(var(--unit) * 8);
+}
+.content h2 {
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-top: calc(var(--unit) * 6);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.content p,
+.content address {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--gray-light);
+  margin-bottom: calc(var(--unit) * 3);
+  text-transform: none;
+  font-style: normal;
+}
+.content a {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+.content a:hover {
+  color: var(--white);
+}
+.content strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--black);
+  padding: calc(var(--unit) * 4) var(--grid-gap);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--unit) * 2);
+}
+.footer-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.footer-links {
+  display: flex;
+  gap: calc(var(--unit) * 3);
+  list-style: none;
+}
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: calc(var(--unit));
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+
+  .nav-inner {
+    grid-template-columns: 1fr auto;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: calc(var(--unit) * 2);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Joniel da Silva</a>
+    <ul class="nav-links">
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/#sprint">Sprint</a></li>
+      <li><a href="/#about">About</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<!-- ═══ CONTENT ═══ -->
+<main class="content">
+  <h1>Imprint</h1>
+
+  <h2>Information according to § 5 TMG</h2>
+  <address>
+    <strong>Joniel da Silva</strong><br>
+    Brand Sprint & Creative Direction<br>
+    Hamburg, Germany
+  </address>
+
+  <h2>Contact</h2>
+  <p>
+    Email: <a href="mailto:joniel@jonieldasilva.com">joniel@jonieldasilva.com</a><br>
+    LinkedIn: <a href="https://www.linkedin.com/in/joniel/" target="_blank" rel="noopener">linkedin.com/in/joniel</a>
+  </p>
+
+  <h2>Responsible for content according to § 55 Abs. 2 RStV</h2>
+  <address>
+    Joniel da Silva<br>
+    Hamburg, Germany
+  </address>
+
+  <h2>Dispute resolution</h2>
+  <p>
+    The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>
+  </p>
+  <p>
+    We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+  </p>
+
+  <h2>Liability for content</h2>
+  <p>
+    As a service provider, we are responsible for our own content on these pages in accordance with general legislation pursuant to Section 7 (1) of the German Telemedia Act (TMG). However, according to Sections 8 to 10 TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+  </p>
+  <p>
+    Obligations to remove or block the use of information in accordance with general legislation remain unaffected by this. However, liability in this regard is only possible from the time of knowledge of a specific infringement. Upon becoming aware of corresponding legal violations, we will remove this content immediately.
+  </p>
+
+  <h2>Liability for links</h2>
+  <p>
+    Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.
+  </p>
+  <p>
+    However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of legal violations, we will remove such links immediately.
+  </p>
+
+  <h2>Copyright</h2>
+  <p>
+    The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution and any kind of use outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.
+  </p>
+  <p>
+    Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.
+  </p>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Joniel da Silva</span>
+    <ul class="footer-links">
+      <li><a href="/imprint.html">Imprint</a></li>
+      <li><a href="/data-policy.html">Data Policy</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -253,7 +253,7 @@ img { display: block; max-width: 100%; }
 }
 .case-sector {
   font-family: var(--futura);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: var(--gray-mid);
@@ -291,7 +291,9 @@ img { display: block; max-width: 100%; }
 }
 .meta-label {
   font-family: var(--futura);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
+  font-family: var(--futura);
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--gray-mid);
@@ -299,7 +301,9 @@ img { display: block; max-width: 100%; }
 }
 .meta-value {
   font-family: var(--futura);
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-family: var(--futura);
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--white);
   line-height: 1.4;
@@ -321,7 +325,7 @@ img { display: block; max-width: 100%; }
 }
 .content-label {
   font-family: var(--futura);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: var(--gray-mid);
@@ -386,7 +390,7 @@ img { display: block; max-width: 100%; }
 }
 .results-label {
   font-family: var(--futura);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: var(--gray-mid);
@@ -486,7 +490,7 @@ img { display: block; max-width: 100%; }
 }
 .cta-label {
   font-family: var(--futura);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 0.6);
@@ -537,8 +541,22 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.05em;
   color: var(--white);
 }
+.footer-links {
+  display: flex;
+  gap: calc(var(--unit) * 3);
+  align-items: center;
+}
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+
 .footer-copy {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--gray-mid);
 }
 
@@ -744,6 +762,10 @@ img { display: block; max-width: 100%; }
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-logo">Joniel da Silva</span>
+    <div class="footer-links">
+      <a href="/imprint.html">Imprint</a>
+      <a href="/data-policy.html">Data Policy</a>
+    </div>
     <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
   </div>
 </footer>

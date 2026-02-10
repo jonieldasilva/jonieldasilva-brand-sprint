@@ -1,0 +1,76 @@
+IMAGE REPLACEMENT GUIDE
+======================
+Created: 2026-02-10
+
+All Unsplash placeholder images have been replaced with blank placeholders.
+Simply replace these files with your actual project images using THE SAME FILENAMES.
+
+LOCATION: /img/projects/
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PLACEHOLDER IMAGES TO REPLACE                                           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+1. they-fight-with-cameras.jpg
+   • Size: 1200 × 675 px (16:9 ratio)
+   • Used in: Homepage work grid (wide card)
+   • Project: They Fight With Cameras (Film/Art Direction)
+
+2. they-fight-with-cameras-film.jpg
+   • Size: 1600 × 1000 px (16:10 ratio)
+   • Used in: Homepage film section (large visual)
+   • Project: They Fight With Cameras (Documentary)
+
+3. radiologie-ahrensburg.jpg
+   • Size: 800 × 600 px (4:3 ratio)
+   • Used in: Homepage work grid
+   • Project: Radiologie Ahrensburg (Healthcare)
+
+4. lm-alltagshilfe.jpg
+   • Size: 800 × 600 px (4:3 ratio)
+   • Used in: Homepage work grid
+   • Project: LM Alltagshilfe (Care Services)
+
+5. steen-digital.jpg
+   • Size: 800 × 600 px (4:3 ratio)
+   • Used in: Homepage work grid
+   • Project: Steen Digital (Consulting)
+
+6. decarbonaid.jpg
+   • Size: 800 × 600 px (4:3 ratio)
+   • Used in: Homepage work grid
+   • Project: Decarbonaid (Sustainability)
+
+7. blablador.jpg
+   • Size: 800 × 600 px (4:3 ratio)
+   • Used in: Homepage work grid
+   • Project: Blablador (AI)
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ HOW TO REPLACE                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+1. Prepare your images at the recommended sizes (or larger)
+2. Save them with the EXACT filenames shown above
+3. Replace the placeholder files in: /img/projects/
+4. Keep JPG format for compatibility (quality 80-90%)
+5. Recommended max file size: 300KB per image
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ IMAGES ALREADY IN PLACE (NO ACTION NEEDED)                              │
+└─────────────────────────────────────────────────────────────────────────┘
+
+✓ /img/hp-header.png - Hero background
+✓ /img/joniel-da-silva.jpg - About section portrait
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ TECHNICAL NOTES                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+• All images use object-fit: cover (will fill container)
+• Images are lazy-loaded for performance
+• Consider using WebP format for better compression (rename .jpg to .webp)
+• The design includes hover effects that slightly scale images
+• Dark overlays are applied via CSS for text readability
+
+═══════════════════════════════════════════════════════════════════════════

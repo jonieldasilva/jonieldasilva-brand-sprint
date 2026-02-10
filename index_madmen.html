@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joniel da Silva — Brand Sprint & Creative Direction</title>
+<meta name="description" content="Strategic branding for founder-led businesses. Brand Sprint, Creative Direction, Visual Identity. Hamburg, Germany." />
+<meta name="theme-color" content="#0F0E0C" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   JONIEL DA SILVA — 1960S MAD MEN / SAUL BASS
+   Mid-century modern: geometric, bold, minimal
+   Fonts: Bebas Neue, IBM Plex Sans
+   ═══════════════════════════════════════════════ */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* 60s color palette - limited, punchy */
+  --black:      #1A1A1A;
+  --white:      #FDFCF8;
+  --cream:      #F4EFE0;
+  --warm-gray:  #E8E3D5;
+  --orange:     #E8501E;  /* Saul Bass orange */
+  --burnt:      #CC3311;
+  --teal:       #2A9D8F;
+  --mustard:    #E9C46A;
+  --navy:       #264653;
+
+  /* Typography */
+  --display: 'Bebas Neue', 'Impact', 'Arial Black', sans-serif;
+  --sans: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+
+  --nav-h: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--white);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── GEOMETRIC SHAPES (Saul Bass style) ─── */
+.geo-shape {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── NAV (Minimal 60s) ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 3px solid var(--black);
+  height: var(--nav-h);
+}
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  transition: color 0.2s;
+}
+.nav-logo:hover {
+  color: var(--orange);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--orange);
+}
+.nav-contact {
+  padding: 12px 28px;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.2s;
+}
+.nav-contact:hover {
+  background: var(--burnt);
+  transform: translateY(-2px);
+}
+
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  font-family: var(--display);
+  font-size: 1.5rem;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* ─── HERO (Bold Saul Bass typography) ─── */
+.hero {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+/* Geometric background elements */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 15%; right: -5%;
+  width: 600px;
+  height: 600px;
+  background: var(--orange);
+  opacity: 0.12;
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%; left: 5%;
+  width: 400px;
+  height: 400px;
+  background: var(--teal);
+  opacity: 0.08;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  z-index: 0;
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  padding: 10px 20px;
+  margin-bottom: 3rem;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(4rem, 13vw, 12rem);
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 2rem;
+  max-width: 1200px;
+}
+.hero h1 .line {
+  display: block;
+}
+.hero h1 .accent {
+  color: var(--orange);
+  display: inline-block;
+  position: relative;
+}
+/* Underline effect à la Saul Bass */
+.hero h1 .accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0.1em; left: 0;
+  width: 100%;
+  height: 0.15em;
+  background: var(--orange);
+  opacity: 0.3;
+}
+.hero-sub {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--black);
+  max-width: 550px;
+  margin-bottom: 3rem;
+}
+.hero-cta {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background: var(--orange);
+  padding: 18px 40px;
+  transition: all 0.2s;
+  position: relative;
+}
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px; right: -4px; bottom: -4px;
+  border: 3px solid var(--black);
+  z-index: -1;
+  transition: all 0.2s;
+}
+.hero-cta:hover {
+  background: var(--burnt);
+  transform: translate(2px, 2px);
+}
+.hero-cta:hover::before {
+  top: 2px; left: 2px; right: -2px; bottom: -2px;
+}
+
+/* ─── SECTION PRIMITIVES ─── */
+.section {
+  padding: clamp(5rem, 10vw, 8rem) 3rem;
+  position: relative;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.section-header {
+  margin-bottom: 4rem;
+}
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+.section-label::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--orange);
+}
+.section-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--black);
+  max-width: 900px;
+}
+.section-desc {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--black);
+  opacity: 0.7;
+  max-width: 600px;
+  margin-top: 1.5rem;
+}
+
+/* ─── WHAT I DO (Grid with geometric elements) ─── */
+.what {
+  background: var(--white);
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+}
+.what .container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: start;
+}
+.services-grid {
+  display: grid;
+  gap: 0;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 2px solid var(--black);
+  position: relative;
+  transition: padding-left 0.3s;
+}
+.service-item:first-child {
+  border-top: 2px solid var(--black);
+}
+.service-item:hover {
+  padding-left: 2rem;
+}
+/* Geometric accent on hover */
+.service-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent var(--orange);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.service-item:hover::before {
+  opacity: 1;
+}
+.service-num {
+  font-family: var(--display);
+  font-size: 4rem;
+  color: var(--orange);
+  min-width: 100px;
+}
+.service-content {
+  flex: 1;
+}
+.service-item h3 {
+  font-family: var(--display);
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+.service-meta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  opacity: 0.5;
+}
+
+/* ─── BRAND SPRINT (Bold geometric layout) ─── */
+.sprint {
+  background: var(--black);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+/* Large geometric shape */
+.sprint::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 700px;
+  height: 700px;
+  background: var(--orange);
+  opacity: 0.15;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  transform: rotate(15deg);
+}
+.sprint .section-label {
+  color: var(--orange);
+}
+.sprint .section-title {
+  color: var(--white);
+}
+.sprint .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.sprint-desc {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--cream);
+  opacity: 0.9;
+  margin-bottom: 3rem;
+}
+.btn-white {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  background: var(--white);
+  padding: 18px 40px;
+  position: relative;
+  transition: all 0.2s;
+}
+.btn-white::before {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px; right: -4px; bottom: -4px;
+  border: 3px solid var(--orange);
+  z-index: -1;
+  transition: all 0.2s;
+}
+.btn-white:hover {
+  background: var(--orange);
+  color: var(--white);
+  transform: translate(2px, 2px);
+}
+.phases {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.phase {
+  padding: 2rem 0;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.phase:first-child {
+  border-top: 2px solid rgba(255,255,255,0.2);
+}
+.phase-num {
+  font-family: var(--display);
+  font-size: 4.5rem;
+  color: var(--orange);
+  line-height: 1;
+}
+.phase h4 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.phase p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--cream);
+  opacity: 0.8;
+}
+
+/* ─── WORK GRID (Bold Mondrian-style grid) ─── */
+.work {
+  background: var(--cream);
+}
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.btn-outline {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  background: transparent;
+  padding: 14px 32px;
+  border: 3px solid var(--black);
+  transition: all 0.2s;
+}
+.btn-outline:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: var(--black);
+  border: 3px solid var(--black);
+}
+.work-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--warm-gray);
+  cursor: pointer;
+}
+.work-card--wide {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+.work-card-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.work-card:hover .work-card-img {
+  transform: scale(1.08);
+}
+.work-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--black) 0%, rgba(26,26,26,0.8) 40%, transparent 70%);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.work-card:hover .work-card-overlay {
+  opacity: 1;
+}
+.work-card-sector {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.8rem;
+}
+.work-card h3 {
+  font-family: var(--display);
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* ─── CLIENTS (60s minimalist) ─── */
+.clients {
+  background: var(--white);
+  padding: 5rem 3rem;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+}
+.clients .section-label {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.clients .section-label::before {
+  display: none;
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+  background: var(--black);
+  border: 3px solid var(--black);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.client-item {
+  aspect-ratio: 1;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.client-item span {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--black);
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+.client-item:hover {
+  background: var(--orange);
+}
+.client-item:hover span {
+  color: var(--white);
+  opacity: 1;
+}
+
+/* ─── ABOUT (Asymmetric layout) ─── */
+.about {
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+/* Geometric accent */
+.about::before {
+  content: '';
+  position: absolute;
+  bottom: 10%; left: -5%;
+  width: 500px;
+  height: 500px;
+  background: var(--teal);
+  opacity: 0.08;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.about .container {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 6rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.about-img-wrap {
+  position: relative;
+}
+.about-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 3px solid var(--black);
+  position: relative;
+  z-index: 1;
+}
+/* Offset shadow effect */
+.about-img-wrap::after {
+  content: '';
+  position: absolute;
+  top: 15px; left: 15px; right: -15px; bottom: -15px;
+  background: var(--orange);
+  opacity: 0.3;
+  z-index: 0;
+}
+.about-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--black);
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+.about-content p strong {
+  font-weight: 700;
+  opacity: 1;
+}
+.about-content p em {
+  font-style: italic;
+  color: var(--orange);
+}
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.tag {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--black);
+  background: transparent;
+  padding: 10px 18px;
+  border: 2px solid var(--black);
+  transition: all 0.2s;
+}
+.tag:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* ─── FILM (Bold feature) ─── */
+.film {
+  background: var(--black);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.film::after {
+  content: '';
+  position: absolute;
+  top: 20%; right: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--teal);
+  opacity: 0.12;
+  border-radius: 50%;
+}
+.film .section-label {
+  color: var(--orange);
+}
+.film .section-title {
+  color: var(--white);
+}
+.film .container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.film-visual {
+  position: relative;
+  aspect-ratio: 16/10;
+  border: 3px solid var(--white);
+  overflow: hidden;
+}
+.film-visual img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* Saul Bass style play button */
+.film-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: var(--orange);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.film-play::after {
+  content: '';
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 25px;
+  border-color: transparent transparent transparent var(--white);
+  margin-left: 5px;
+}
+.film-play:hover {
+  transform: translate(-50%, -50%) rotate(5deg) scale(1.1);
+}
+.film-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--cream);
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+.film-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  margin-bottom: 2.5rem;
+  border-top: 2px solid rgba(255,255,255,0.2);
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+.film-meta-item span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.6rem;
+}
+.film-meta-item strong {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+/* ─── CONTACT (Bold CTA) ─── */
+.contact {
+  background: var(--orange);
+  color: var(--white);
+  padding: clamp(8rem, 15vw, 12rem) 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -20%; left: 20%;
+  width: 800px;
+  height: 800px;
+  background: var(--burnt);
+  opacity: 0.3;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  transform: rotate(22.5deg);
+}
+.contact .section-label {
+  color: var(--white);
+  opacity: 0.7;
+}
+.contact .section-label::before {
+  background: var(--white);
+}
+.contact .section-title {
+  color: var(--white);
+  margin: 0 auto 2rem;
+}
+.contact-desc {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--white);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.btn-large {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--orange);
+  background: var(--white);
+  padding: 20px 45px;
+  position: relative;
+  transition: all 0.2s;
+}
+.btn-large::before {
+  content: '';
+  position: absolute;
+  top: 5px; left: 5px; right: -5px; bottom: -5px;
+  border: 3px solid var(--white);
+  z-index: -1;
+  transition: all 0.2s;
+}
+.btn-large:hover {
+  background: var(--black);
+  color: var(--white);
+  transform: translate(3px, 3px);
+}
+.btn-large-outline {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background: transparent;
+  padding: 20px 45px;
+  border: 3px solid var(--white);
+  transition: all 0.2s;
+}
+.btn-large-outline:hover {
+  background: var(--white);
+  color: var(--orange);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 3rem;
+  border-top: 3px solid var(--white);
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  color: var(--white);
+}
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--cream);
+  opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .what .container,
+  .sprint .container,
+  .about .container,
+  .film .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .film-meta {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 60px; }
+
+  .nav-inner {
+    padding: 0 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .section {
+    padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+  }
+
+  .service-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .service-num {
+    min-width: auto;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-card--wide {
+    grid-column: span 1;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer .container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">JONIEL DA SILVA</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#sprint">Sprint</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#contact" class="nav-contact">Contact</a>
+    <button class="nav-toggle" aria-label="Menu">MENU</button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Brand Sprint & Creative Direction</span>
+    <h1>
+      <span class="line">FROM CHAOS</span>
+      <span class="line">TO <span class="accent">SHAPE.</span></span>
+    </h1>
+    <p class="hero-sub">I give founder-led businesses a coherent strategic brand in 4–6 weeks. Editorial clarity. Lasting form. No generic frameworks.</p>
+    <a href="#contact" class="hero-cta">Start a Conversation</a>
+  </div>
+</section>
+
+<!-- ═══ WHAT I DO ═══ -->
+<section class="section what">
+  <div class="container">
+    <div>
+      <div class="section-header">
+        <p class="section-label">What I Do</p>
+        <h2 class="section-title">STRATEGIC BRANDING AT THE INTERSECTION OF DISCIPLINE AND CREATIVE INSTINCT</h2>
+        <p class="section-desc">I work with founders who have strong intuition but scattered expression. The goal is never to simplify — it's to organise with care, and leave room for what comes next.</p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-num">01</div>
+        <div class="service-content">
+          <h3>BRAND SPRINT</h3>
+          <p class="service-meta">4–6 Weeks</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">02</div>
+        <div class="service-content">
+          <h3>CREATIVE DIRECTION</h3>
+          <p class="service-meta">Film & Campaign</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">03</div>
+        <div class="service-content">
+          <h3>VISUAL IDENTITY</h3>
+          <p class="service-meta">Systems & Rollout</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-num">04</div>
+        <div class="service-content">
+          <h3>FINE ART</h3>
+          <p class="service-meta">Watercolour & Print</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BRAND SPRINT ═══ -->
+<section class="section sprint" id="sprint">
+  <div class="container">
+    <div>
+      <div class="section-header">
+        <p class="section-label">The Brand Sprint</p>
+        <h2 class="section-title">A FOCUSED PROCESS.<br>A LASTING RESULT.</h2>
+      </div>
+      <p class="sprint-desc">Most businesses arrive with good instincts and no clear shape. The Brand Sprint distils what already exists into a strategic foundation — coherent narrative, clear positioning, a visible horizon for growth.</p>
+      <a href="#contact" class="btn-white">Start a Conversation</a>
+    </div>
+
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-num">1</div>
+        <div>
+          <h4>LISTENING & EXTRACTION</h4>
+          <p>Deep conversations. Pattern recognition. Separating noise from what truly matters.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">2</div>
+        <div>
+          <h4>SYNTHESIS & DIRECTION</h4>
+          <p>Define the core tension. Articulate what the brand is — and what it refuses to be.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">3</div>
+        <div>
+          <h4>SHAPING THE CORE</h4>
+          <p>Translate direction into narrative, tone, and visual logic. Fewer, stronger decisions.</p>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">4</div>
+        <div>
+          <h4>CONSOLIDATION & HORIZON</h4>
+          <p>A shared system that enables confident decisions and makes the future actionable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SELECTED WORK ═══ -->
+<section class="section work" id="work">
+  <div class="container">
+    <div class="work-header">
+      <div class="section-header">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">RECENT PROJECTS & BRAND SPRINTS</h2>
+      </div>
+      <a href="/work/" class="btn-outline">View All</a>
+    </div>
+
+    <div class="work-grid">
+      <a href="/work/they-fight-with-cameras" class="work-card work-card--wide">
+        <img class="work-card-img" src="/img/projects/they-fight-with-cameras.jpg" alt="They Fight With Cameras" loading="lazy" />
+        <div class="work-card-overlay">
+          <span class="work-card-sector">Film · Art Direction</span>
+          <h3>THEY FIGHT WITH CAMERAS</h3>
+        </div>
+      </a>
+      <a href="/work/radiologie-ahrensburg" class="work-card">
+        <img class="work-card-img" src="/img/projects/radiologie-ahrensburg.jpg" alt="Radiologie Ahrensburg" loading="lazy" />
+        <div class="work-card-overlay">
+          <span class="work-card-sector">Healthcare · Brand Sprint</span>
+          <h3>RADIOLOGIE AHRENSBURG</h3>
+        </div>
+      </a>
+      <a href="/work/lm-alltagshilfe" class="work-card">
+        <img class="work-card-img" src="/img/projects/lm-alltagshilfe.jpg" alt="LM Alltagshilfe" loading="lazy" />
+        <div class="work-card-overlay">
+          <span class="work-card-sector">Care Services · Brand Sprint</span>
+          <h3>LM ALLTAGSHILFE</h3>
+        </div>
+      </a>
+      <a href="/work/steent" class="work-card">
+        <img class="work-card-img" src="/img/projects/steen-digital.jpg" alt="Steen Digital" loading="lazy" />
+        <div class="work-card-overlay">
+          <span class="work-card-sector">Consulting · Brand Sprint</span>
+          <h3>STEEN DIGITAL</h3>
+        </div>
+      </a>
+      <a href="/work/decarbonaid" class="work-card">
+        <img class="work-card-img" src="/img/projects/decarbonaid.jpg" alt="Decarbonaid" loading="lazy" />
+        <div class="work-card-overlay">
+          <span class="work-card-sector">Sustainability · Brand Identity</span>
+          <h3>DECARBONAID</h3>
+        </div>
+      </a>
+      <a href="/work/blablador" class="work-card">
+        <img class="work-card-img" src="/img/projects/blablador.jpg" alt="Blablador" loading="lazy" />
+        <div class="work-card-overlay">
+          <span class="work-card-sector">AI · Visual Identity</span>
+          <h3>BLABLADOR</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLIENTS ═══ -->
+<section class="clients">
+  <p class="section-label">Trusted By</p>
+  <div class="clients-grid">
+    <div class="client-item"><span>QATAR AIRWAYS</span></div>
+    <div class="client-item"><span>MONTBLANC</span></div>
+    <div class="client-item"><span>DENTSU</span></div>
+    <div class="client-item"><span>STORCK</span></div>
+    <div class="client-item"><span>GRAF VON FABER-CASTELL</span></div>
+    <div class="client-item"><span>SWAROVSKI</span></div>
+    <div class="client-item"><span>SEAT</span></div>
+    <div class="client-item"><span>NIVEA</span></div>
+    <div class="client-item"><span>VOLTAREN</span></div>
+    <div class="client-item"><span>NOVARTIS</span></div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-img-wrap">
+      <img class="about-img" src="/img/joniel-da-silva.jpg" alt="Joniel da Silva" loading="lazy" />
+    </div>
+    <div class="about-content">
+      <div class="section-header">
+        <p class="section-label">About</p>
+        <h2 class="section-title">A CREATIVE STRATEGIST AT THE EDGE OF BRAND, FILM, AND FINE ART</h2>
+      </div>
+      <p>Born in Salvador, Brazil. Based in Hamburg. Over two decades working with global brands — from Qatar Airways and Montblanc to small founder-led businesses that needed clarity more than polish.</p>
+      <p>In the last year I developed the <strong>Brand Sprint</strong>: a focused 4–6 week process that transforms scattered ideas into a coherent strategic shape. I also serve as Art Director for Daedalus Productions on <em>They Fight With Cameras</em>, a documentary.</p>
+      <p>The thread across everything: editorial restraint. Form that doesn't limit — it unlocks.</p>
+      <div class="about-tags">
+        <span class="tag">Brand Strategy</span>
+        <span class="tag">Creative Direction</span>
+        <span class="tag">Visual Identity</span>
+        <span class="tag">Film</span>
+        <span class="tag">Fine Art</span>
+        <span class="tag">Watercolour</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FILM ═══ -->
+<section class="section film">
+  <div class="container">
+    <div class="film-visual">
+      <img src="/img/projects/they-fight-with-cameras-film.jpg" alt="They Fight With Cameras — Documentary" loading="lazy" />
+      <div class="film-play"></div>
+    </div>
+    <div class="film-content">
+      <div class="section-header">
+        <p class="section-label">In Production</p>
+        <h2 class="section-title">THEY FIGHT WITH CAMERAS</h2>
+      </div>
+      <p>A documentary about the war photographers who shaped how we see conflict. I serve as Campaign Art Director for Daedalus Productions — leading the visual language of the campaign.</p>
+      <div class="film-meta">
+        <div class="film-meta-item">
+          <span>Role</span>
+          <strong>ART DIRECTOR</strong>
+        </div>
+        <div class="film-meta-item">
+          <span>Studio</span>
+          <strong>DAEDALUS PRODUCTIONS INC.</strong>
+        </div>
+        <div class="film-meta-item">
+          <span>Status</span>
+          <strong>IN PRODUCTION</strong>
+        </div>
+      </div>
+      <a href="https://theyfightwithcameras.com" class="btn-white" target="_blank" rel="noopener">Visit Site</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="contact" id="contact">
+  <p class="section-label">Let's Talk</p>
+  <h2 class="section-title">READY TO GIVE YOUR BRAND A SHAPE?</h2>
+  <p class="contact-desc">I take on a limited number of Brand Sprints each year. If your business has strong instincts but unclear expression — let's start a conversation.</p>
+  <div class="contact-actions">
+    <a href="mailto:joniel@jonieldasilva.com" class="btn-large">Email Me</a>
+    <a href="https://linkedin.com/in/jonieldasilva" class="btn-large-outline" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <span class="footer-logo">JONIEL DA SILVA</span>
+    <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const navHeight = 70;
+        window.scrollTo({
+          top: target.offsetTop - navHeight,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

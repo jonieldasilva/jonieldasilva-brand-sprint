@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Data Policy — Joniel da Silva</title>
+<meta name="description" content="Data protection and privacy policy for Joniel da Silva Brand Sprint & Creative Direction." />
+<meta name="theme-color" content="#000000" />
+<style>
+/* ═══════════════════════════════════════════════
+   JONIEL DA SILVA — BAUHAUS DARK MODERNIST
+   Legal Page
+   ═══════════════════════════════════════════════ */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:      #000000;
+  --white:      #FFFFFF;
+  --dark-bg:    #0A0A0A;
+  --dark-card:  #141414;
+  --gray-dark:  #1F1F1F;
+  --gray-mid:   #666666;
+  --gray-light: #999999;
+  --accent:     #D32F2F;
+
+  --futura: 'Futura', 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif;
+
+  --unit: 8px;
+  --grid-gap: calc(var(--unit) * 3);
+  --nav-h: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--futura);
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: var(--nav-h);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+.nav-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: calc(var(--unit) * 5);
+  justify-content: center;
+}
+.nav-links a {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-light);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-cta {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--white);
+  padding: calc(var(--unit) * 2) calc(var(--unit) * 4);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.nav-toggle {
+  display: none;
+}
+
+/* ─── CONTENT ─── */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + calc(var(--unit) * 12)) var(--grid-gap) calc(var(--unit) * 12);
+}
+.content h1 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: calc(var(--unit) * 8);
+}
+.content h2 {
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-top: calc(var(--unit) * 6);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.content h3 {
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-top: calc(var(--unit) * 4);
+  margin-bottom: calc(var(--unit) * 2);
+}
+.content p,
+.content ul {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--gray-light);
+  margin-bottom: calc(var(--unit) * 3);
+  text-transform: none;
+}
+.content ul {
+  padding-left: calc(var(--unit) * 3);
+}
+.content li {
+  margin-bottom: calc(var(--unit));
+}
+.content a {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+.content a:hover {
+  color: var(--white);
+}
+.content strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--black);
+  padding: calc(var(--unit) * 4) var(--grid-gap);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--unit) * 2);
+}
+.footer-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.footer-links {
+  display: flex;
+  gap: calc(var(--unit) * 3);
+  list-style: none;
+}
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: calc(var(--unit));
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+
+  .nav-inner {
+    grid-template-columns: 1fr auto;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: calc(var(--unit) * 2);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Joniel da Silva</a>
+    <ul class="nav-links">
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/#sprint">Sprint</a></li>
+      <li><a href="/#about">About</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<!-- ═══ CONTENT ═══ -->
+<main class="content">
+  <h1>Data Protection Policy</h1>
+
+  <p><strong>Last updated:</strong> February 2026</p>
+
+  <h2>1. Data Protection at a Glance</h2>
+
+  <h3>General Information</h3>
+  <p>
+    The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally.
+  </p>
+
+  <h3>Data Collection on This Website</h3>
+  <p><strong>Who is responsible for data collection on this website?</strong></p>
+  <p>
+    Data processing on this website is carried out by the website operator. You can find the operator's contact details in the "Information according to § 5 TMG" section of the imprint.
+  </p>
+
+  <p><strong>How do we collect your data?</strong></p>
+  <p>
+    Your data is collected on the one hand by you providing it to us. This can be, for example, data that you enter in a contact form.
+  </p>
+  <p>
+    Other data is collected automatically or with your consent by our IT systems when you visit the website. This is primarily technical data (e.g. internet browser, operating system or time of page view). This data is collected automatically as soon as you enter this website.
+  </p>
+
+  <p><strong>What do we use your data for?</strong></p>
+  <p>
+    Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.
+  </p>
+
+  <h2>2. Hosting</h2>
+  <p>
+    This website is hosted by Netlify. The provider is Netlify, Inc., 2325 3rd Street, Suite 296, San Francisco, California 94107, USA.
+  </p>
+  <p>
+    Netlify processes data on our behalf and is obligated by contract to take measures to ensure the security and confidentiality of the processed data.
+  </p>
+  <p>
+    For more information, please see Netlify's privacy policy: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com/privacy</a>
+  </p>
+
+  <h2>3. General Information and Mandatory Information</h2>
+
+  <h3>Data Protection</h3>
+  <p>
+    The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration.
+  </p>
+  <p>
+    When you use this website, various personal data is collected. Personal data is data with which you can be personally identified. This data protection declaration explains what data we collect and what we use it for. It also explains how and for what purpose this is done.
+  </p>
+  <p>
+    We would like to point out that data transmission over the Internet (e.g. when communicating by email) can have security gaps. Complete protection of data against access by third parties is not possible.
+  </p>
+
+  <h3>Responsible Party</h3>
+  <p>
+    The responsible party for data processing on this website is:<br>
+    <strong>Joniel da Silva</strong><br>
+    Hamburg, Germany<br>
+    Email: <a href="mailto:joniel@jonieldasilva.com">joniel@jonieldasilva.com</a>
+  </p>
+  <p>
+    The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data (e.g. names, email addresses, etc.).
+  </p>
+
+  <h3>Storage Duration</h3>
+  <p>
+    Unless a more specific storage period has been specified within this data protection declaration, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g. tax or commercial law retention periods); in the latter case, the deletion takes place after these reasons no longer apply.
+  </p>
+
+  <h3>Right to Data Portability</h3>
+  <p>
+    You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party in a common, machine-readable format. If you request the direct transfer of the data to another responsible party, this will only be done to the extent that it is technically feasible.
+  </p>
+
+  <h3>Right to Information, Deletion, and Correction</h3>
+  <p>
+    Within the framework of the applicable legal provisions, you have the right at any time to free information about your stored personal data, its origin and recipient and the purpose of data processing and, if necessary, a right to correction or deletion of this data. You can contact us at any time at the address given in the imprint if you have further questions on the subject of personal data.
+  </p>
+
+  <h3>Right to Restriction of Processing</h3>
+  <p>
+    You have the right to request the restriction of the processing of your personal data. You can contact us at any time at the address given in the imprint. The right to restriction of processing exists in the following cases:
+  </p>
+  <ul>
+    <li>If you dispute the accuracy of your personal data stored by us, we usually need time to verify this. For the duration of the review, you have the right to request the restriction of the processing of your personal data.</li>
+    <li>If the processing of your personal data happened/is happening unlawfully, you can request the restriction of data processing instead of deletion.</li>
+    <li>If we no longer need your personal data, but you need it to exercise, defend or assert legal claims, you have the right to request restriction of the processing of your personal data instead of deletion.</li>
+    <li>If you have filed an objection pursuant to Art. 21 (1) GDPR, a balance must be struck between your interests and ours. As long as it has not yet been determined whose interests prevail, you have the right to request the restriction of the processing of your personal data.</li>
+  </ul>
+
+  <h2>4. Data Collection on This Website</h2>
+
+  <h3>Contact via Email</h3>
+  <p>
+    If you contact us by email, your inquiry including all resulting personal data (name, inquiry) will be stored and processed by us for the purpose of processing your request. We do not pass on this data without your consent.
+  </p>
+  <p>
+    This data is processed on the basis of Art. 6 (1) lit. b GDPR, if your request is related to the fulfillment of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of the inquiries addressed to us (Art. 6 (1) lit. f GDPR) or on your consent (Art. 6 (1) lit. a GDPR) if this has been requested.
+  </p>
+  <p>
+    The data you send to us via contact requests will remain with us until you request us to delete it, revoke your consent to storage or the purpose for data storage no longer applies (e.g. after your request has been processed). Mandatory statutory provisions - in particular statutory retention periods - remain unaffected.
+  </p>
+
+  <h2>5. Your Rights</h2>
+  <p>
+    If personal data is processed by you, you are a data subject within the meaning of the GDPR and you have the following rights vis-à-vis the controller:
+  </p>
+  <ul>
+    <li><strong>Right to information:</strong> You can request confirmation as to whether personal data concerning you is being processed by us.</li>
+    <li><strong>Right to rectification:</strong> You have the right to request that we correct inaccurate personal data concerning you without delay.</li>
+    <li><strong>Right to erasure:</strong> You have the right to request that we delete your personal data without delay under certain conditions.</li>
+    <li><strong>Right to restriction of processing:</strong> You have the right to request that we restrict the processing of your personal data under certain conditions.</li>
+    <li><strong>Right to data portability:</strong> You have the right to receive the personal data concerning you in a structured, commonly used and machine-readable format.</li>
+    <li><strong>Right to object:</strong> You have the right to object at any time to the processing of personal data concerning you.</li>
+  </ul>
+
+  <h2>6. Changes to This Policy</h2>
+  <p>
+    We reserve the right to update this data protection declaration so that it always complies with current legal requirements or to implement changes to our services in the data protection declaration, e.g. when introducing new services. The new data protection declaration will then apply to your next visit.
+  </p>
+
+  <h2>7. Contact</h2>
+  <p>
+    If you have any questions about data protection, please email us at <a href="mailto:joniel@jonieldasilva.com">joniel@jonieldasilva.com</a>
+  </p>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Joniel da Silva</span>
+    <ul class="footer-links">
+      <li><a href="/imprint.html">Imprint</a></li>
+      <li><a href="/data-policy.html">Data Policy</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
+  </div>
+</footer>
+
+</body>
+</html>
