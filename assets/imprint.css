@@ -1,0 +1,224 @@
+/* ═══════════════════════════════════════════════
+   JONIEL DA SILVA — BAUHAUS DARK MODERNIST
+   Legal Page
+   ═══════════════════════════════════════════════ */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:      #000000;
+  --white:      #FFFFFF;
+  --dark-bg:    #0A0A0A;
+  --dark-card:  #141414;
+  --gray-dark:  #1F1F1F;
+  --gray-mid:   #666666;
+  --gray-light: #999999;
+  --accent:     #D32F2F;
+
+  --futura: 'Futura', 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif;
+
+  --unit: 8px;
+  --grid-gap: calc(var(--unit) * 3);
+  --nav-h: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--futura);
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: var(--nav-h);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+.nav-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: calc(var(--unit) * 5);
+  justify-content: center;
+}
+.nav-links a {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-light);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-cta {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--white);
+  padding: calc(var(--unit) * 2) calc(var(--unit) * 4);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.nav-toggle {
+  display: none;
+}
+
+/* ─── CONTENT ─── */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + calc(var(--unit) * 12)) var(--grid-gap) calc(var(--unit) * 12);
+}
+.content h1 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: calc(var(--unit) * 8);
+}
+.content h2 {
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-top: calc(var(--unit) * 6);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.content p,
+.content address {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--gray-light);
+  margin-bottom: calc(var(--unit) * 3);
+  text-transform: none;
+  font-style: normal;
+}
+.content a {
+  color: var(--accent);
+  transition: color 0.2s;
+}
+.content a:hover {
+  color: var(--white);
+}
+.content strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--black);
+  padding: calc(var(--unit) * 4) var(--grid-gap);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--unit) * 2);
+}
+.footer-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.footer-links {
+  display: flex;
+  gap: calc(var(--unit) * 3);
+  list-style: none;
+}
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--gray-mid);
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: calc(var(--unit));
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+
+  .nav-inner {
+    grid-template-columns: 1fr auto;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: calc(var(--unit) * 2);
+  }
+}
