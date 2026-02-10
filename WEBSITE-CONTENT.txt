@@ -1,0 +1,725 @@
+JONIEL DA SILVA -- WEBSITE CONTENT DOCUMENT
+=============================================
+Generated: 2026-02-09
+Total pages: 8
+
+This document contains ALL editable text content from every page of the website.
+Edit the text below, then upload the file back to have changes applied.
+
+NOTE: Text wrapped in [BOLD] markers appears as bold on the site.
+      Text wrapped in [ITALIC] markers appears as italic on the site.
+      HTML entities have been converted to readable characters (e.g. & for &amp;).
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 1: HOMEPAGE                                                          ##
+##  File: index.html                                                          ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: Joniel da Silva -- Brand Sprint & Creative Direction
+Meta Description: Strategic branding for founder-led businesses. Brand Sprint, Creative Direction, Visual Identity. Hamburg, Germany.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Tag: Brand Sprint & Creative Direction
+Heading: From chaos to [ITALIC]shape.[/ITALIC]
+Subheading: I give founder-led businesses a coherent strategic brand in 4-6 weeks. Editorial clarity. Lasting form. No generic frameworks.
+Scroll Indicator: Scroll
+
+SECTION: What I Do
+---
+Label: What I Do
+Heading: Strategic branding at the intersection of discipline and creative instinct.
+Description: I work with founders who have strong intuition but scattered expression. The goal is never to simplify -- it's to organise with care, and leave room for what comes next.
+
+Service 1 Name: Brand Sprint
+Service 1 Detail: 4-6 Weeks
+
+Service 2 Name: Creative Direction
+Service 2 Detail: Film & Campaign
+
+Service 3 Name: Visual Identity
+Service 3 Detail: Systems & Rollout
+
+Service 4 Name: Fine Art
+Service 4 Detail: Watercolour & Print
+
+SECTION: Brand Sprint
+---
+Label: The Brand Sprint
+Heading: A focused process. A lasting result.
+Description: Most businesses arrive with good instincts and no clear shape. The Brand Sprint distils what already exists into a strategic foundation -- coherent narrative, clear positioning, a visible horizon for growth.
+Button Text: Start a conversation
+
+Phase 1 Title: Listening & Extraction
+Phase 1 Description: Deep conversations. Pattern recognition. Separating noise from what truly matters.
+
+Phase 2 Title: Synthesis & Direction
+Phase 2 Description: Define the core tension. Articulate what the brand is -- and what it refuses to be.
+
+Phase 3 Title: Shaping the Core
+Phase 3 Description: Translate direction into narrative, tone, and visual logic. Fewer, stronger decisions.
+
+Phase 4 Title: Consolidation & Horizon
+Phase 4 Description: A shared system that enables confident decisions and makes the future actionable.
+
+SECTION: Selected Work
+---
+Label: Selected Work
+Heading: Recent projects & brand sprints
+Button Text: View All
+
+Card 1 Sector: Film . Art Direction
+Card 1 Title: They Fight With Cameras
+
+Card 2 Sector: Healthcare . Brand Sprint
+Card 2 Title: Radiologie Ahrensburg
+
+Card 3 Sector: Care Services . Brand Sprint
+Card 3 Title: LM Alltagshilfe
+
+Card 4 Sector: Consulting . Brand Sprint
+Card 4 Title: Steen Digital
+
+Card 5 Sector: Sustainability . Brand Identity
+Card 5 Title: Decarbonaid
+
+Card 6 Sector: AI . Visual Identity
+Card 6 Title: Blablador
+
+SECTION: Clients
+---
+Label: Trusted By
+Client 1: Qatar Airways
+Client 2: Montblanc
+Client 3: Dentsu
+Client 4: Storck
+Client 5: Graf von Faber-Castell
+Client 6: Swarovski
+Client 7: SEAT
+Client 8: Nivea
+Client 9: Voltaren
+Client 10: Novartis
+
+SECTION: About
+---
+Label: About
+Heading: A creative strategist at the edge of brand, film, and fine art.
+Paragraph 1: Born in Salvador, Brazil. Based in Hamburg. Over two decades working with global brands -- from Qatar Airways and Montblanc to small founder-led businesses that needed clarity more than polish.
+Paragraph 2: In the last year I developed the [BOLD]Brand Sprint[/BOLD]: a focused 4-6 week process that transforms scattered ideas into a coherent strategic shape. I also serve as Art Director for Daedalus Productions on [ITALIC]They Fight With Cameras[/ITALIC], a documentary.
+Paragraph 3: The thread across everything: editorial restraint. Form that doesn't limit -- it unlocks.
+
+Tag 1: Brand Strategy
+Tag 2: Creative Direction
+Tag 3: Visual Identity
+Tag 4: Film
+Tag 5: Fine Art
+Tag 6: Watercolour
+
+SECTION: Film
+---
+Label: In Production
+Heading: They Fight With Cameras
+Description: A documentary about the war photographers who shaped how we see conflict. I serve as Campaign Art Director for Daedalus Productions -- leading the visual language of the campaign.
+Meta Role Label: Role
+Meta Role Value: Art Director
+Meta Studio Label: Studio
+Meta Studio Value: Daedalus Productions Inc.
+Meta Status Label: Status
+Meta Status Value: In Production
+Button Text: Visit Site
+Button URL: https://theyfightwithcameras.com
+
+SECTION: Contact
+---
+Label: Let's Talk
+Heading: Ready to give your brand a shape?
+Description: I take on a limited number of Brand Sprints each year. If your business has strong instincts but unclear expression -- let's start a conversation.
+Button 1 Text: Email Me
+Button 1 URL: mailto:joniel@jonieldasilva.com
+Button 2 Text: LinkedIn
+Button 2 URL: https://linkedin.com/in/jonieldasilva
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 2: WORK INDEX                                                        ##
+##  File: work/index.html                                                     ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: Work -- Joniel da Silva
+Meta Description: Selected projects and brand sprints by Joniel da Silva. Brand Strategy, Creative Direction, Visual Identity.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Page Header
+---
+Label: Selected Work
+Heading: Projects & brand sprints
+Description: A selection of recent brand sprints, creative direction, and visual identity work for founder-led businesses and global brands.
+
+SECTION: Project Cards
+---
+Card 1 Sector: Film . Art Direction
+Card 1 Title: They Fight With Cameras
+Card 1 Description: Art direction for a documentary about the war photographers who shaped how we see conflict. Leading the visual language for Daedalus Productions.
+Card 1 Link Text: View Project
+
+Card 2 Sector: Healthcare . Brand Sprint
+Card 2 Title: Radiologie Ahrensburg
+Card 2 Description: A respected radiology practice needed to modernise its brand without losing the trust and authority built over 15 years. Precision meets warmth.
+Card 2 Link Text: View Project
+
+Card 3 Sector: Care Services . Brand Sprint
+Card 3 Title: LM Alltagshilfe
+Card 3 Description: A home care company built on genuine compassion needed a brand that matched. We centred the identity on dignity, autonomy, and everyday heroism.
+Card 3 Link Text: View Project
+
+Card 4 Sector: Consulting . Brand Sprint
+Card 4 Title: Steen Digital
+Card 4 Description: Two ex-McKinsey partners with deep expertise but a forgettable brand. The sprint uncovered their core tension: rigour without rigidity.
+Card 4 Link Text: View Project
+
+Card 5 Sector: Sustainability . Brand Identity
+Card 5 Title: Decarbonaid
+Card 5 Description: A climate-tech startup with a brilliant product but no coherent brand. Clarity became the antidote to greenwashing.
+Card 5 Link Text: View Project
+
+Card 6 Sector: AI . Visual Identity
+Card 6 Title: Blablador
+Card 6 Description: Conversational AI for the European market focused on trust and privacy. A visual identity that bridges machine precision and human warmth.
+Card 6 Link Text: View Project
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 3: CASE STUDY -- They Fight With Cameras                             ##
+##  File: work/they-fight-with-cameras.html                                   ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: They Fight With Cameras -- Joniel da Silva
+Meta Description: Art Direction for They Fight With Cameras, a documentary about war photographers. Case study by Joniel da Silva.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Back Link Text: Back to Work
+Sector Label: Film . Art Direction
+Heading: They Fight With Cameras
+
+SECTION: Meta Fields
+---
+Client: Daedalus Productions
+Role: Art Director
+Year: 2025 -- Present
+Status: In Production
+
+SECTION: The Challenge
+---
+Label: The Challenge
+Heading: A documentary that needed a visual language as unflinching as its subjects.
+Paragraph 1: [ITALIC]They Fight With Cameras[/ITALIC] tells the story of war photographers who shaped how the world sees conflict. The film demanded an art direction that honoured the gravity of its subject without becoming sentimental or overwrought.
+Paragraph 2: Daedalus Productions approached me to define the visual identity of the campaign -- from title design to promotional materials, festival submissions, and the broader narrative architecture that would carry the documentary from screen to audience.
+
+SECTION: The Approach
+---
+Label: The Approach
+Heading: Restraint as a form of respect.
+Paragraph 1: The visual system builds on contrasts: [BOLD]silence against noise[/BOLD], [BOLD]stillness against chaos[/BOLD]. We developed a typographic-led identity using stark black-and-white photography, precise editorial framing, and a restrained colour palette that lets the subject matter speak.
+Paragraph 2: Every design decision was guided by one principle: the photographers are the heroes, not the design. The visual language serves the story -- never competes with it.
+Quote: The best art direction disappears. It creates conditions for the story to land.
+
+SECTION: The Outcome
+---
+Label: The Outcome
+Heading: A visual system built for longevity.
+Paragraph 1: The campaign identity has been adopted across all touchpoints -- title sequences, press kits, festival submissions, social media, and merchandise. It provides a cohesive visual backbone that adapts to each format while maintaining the film's emotional integrity.
+Paragraph 2: As the documentary moves through production and into distribution, the identity system continues to evolve -- always guided by the same principles of editorial restraint and narrative clarity.
+
+SECTION: Results
+---
+Label: Impact
+Heading: The numbers behind the narrative.
+Result 1 Number: 12+
+Result 1 Description: Festival submissions with consistent brand identity across all materials
+Result 2 Number: 1
+Result 2 Description: Unified visual system spanning title, print, digital, and merchandise
+Result 3 Number: 3
+Result 3 Description: International press features citing the campaign's visual distinction
+
+SECTION: Project Navigation
+---
+Previous Project: (none -- this is the first project)
+Next Project: Radiologie Ahrensburg
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 4: CASE STUDY -- Radiologie Ahrensburg                               ##
+##  File: work/radiologie-ahrensburg.html                                     ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: Radiologie Ahrensburg -- Joniel da Silva
+Meta Description: Brand Sprint for Radiologie Ahrensburg, a healthcare radiology practice in northern Germany. Case study by Joniel da Silva.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Back Link Text: Back to Work
+Sector Label: Healthcare . Brand Sprint
+Heading: Radiologie Ahrensburg
+
+SECTION: Meta Fields
+---
+Client: Radiologie Ahrensburg
+Role: Brand Strategist
+Year: 2025
+Scope: Brand Sprint (4 weeks)
+
+SECTION: The Challenge
+---
+Label: The Challenge
+Heading: A respected practice that needed to feel as warm as it is precise.
+Paragraph 1: A respected radiology practice in northern Germany needed to modernise its brand without losing the trust and authority it had built over 15 years. Their visual identity felt clinical and cold -- patients found it impersonal.
+Paragraph 2: The task was clear: bridge the gap between medical expertise and human connection, creating a brand that patients could trust [BOLD]and[/BOLD] feel welcomed by.
+
+SECTION: The Approach
+---
+Label: The Approach
+Heading: Precision and warmth are not opposites.
+Paragraph 1: We started with deep listening sessions with the founding radiologists and their team. The insight: [BOLD]precision and warmth are not opposites[/BOLD]. The new brand positions the practice as technically excellent AND deeply human.
+Paragraph 2: The visual identity uses clean medical confidence paired with warm, inviting tones. Every element -- from typography to colour palette to photography direction -- was designed to communicate both authority and approachability.
+Quote: Precision in medicine. Warmth in care. The brand needed to hold both truths at once.
+
+SECTION: The Outcome
+---
+Label: The Outcome
+Heading: A brand system built for trust and growth.
+Paragraph 1: A complete brand system including new visual identity, patient-facing communications, signage system, digital presence guidelines, and internal brand manual. The practice reported a 30% increase in patient referrals within 3 months.
+Paragraph 2: The new identity unified every patient touchpoint -- from the moment they visit the website to the experience of walking through the doors -- creating a coherent, reassuring presence that reflects the quality of care inside.
+
+SECTION: Results
+---
+Label: Impact
+Heading: The numbers behind the transformation.
+Result 1 Number: 30%
+Result 1 Description: Increase in patient referrals within three months of the rebrand launch
+Result 2 Number: 4
+Result 2 Description: Week sprint delivery from discovery to complete brand system handoff
+Result 3 Number: 12
+Result 3 Description: Touchpoints unified under one cohesive brand system
+
+SECTION: Project Navigation
+---
+Previous Project: They Fight With Cameras
+Next Project: LM Alltagshilfe
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 5: CASE STUDY -- LM Alltagshilfe                                     ##
+##  File: work/lm-alltagshilfe.html                                           ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: LM Alltagshilfe -- Joniel da Silva
+Meta Description: Brand Sprint for LM Alltagshilfe, a care services company in Hamburg. Case study by Joniel da Silva.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Back Link Text: Back to Work
+Sector Label: Care Services . Brand Sprint
+Heading: LM Alltagshilfe
+
+SECTION: Meta Fields
+---
+Client: LM Alltagshilfe
+Role: Brand Strategist
+Year: 2025
+Scope: Brand Sprint (5 weeks)
+
+SECTION: The Challenge
+---
+Label: The Challenge
+Heading: A care company built on compassion -- but invisible in a crowded market.
+Paragraph 1: A home care company in Hamburg providing daily assistance to elderly and mobility-impaired clients. The founder, Lisa Mueller, had built the business on genuine compassion -- but the brand looked generic, indistinguishable from dozens of other care services in the region.
+
+SECTION: The Approach
+---
+Label: The Approach
+Heading: Preserving independence, not replacing it.
+Paragraph 1: The Brand Sprint uncovered a powerful differentiator: LM Alltagshilfe doesn't just provide care -- they [BOLD]preserve independence[/BOLD]. Every service is designed to help clients maintain their daily routines, not replace them.
+Paragraph 2: The new brand narrative centres on [BOLD]dignity, autonomy, and the quiet heroism of everyday life[/BOLD]. Visual identity uses warm, human photography and a colour palette that feels like home -- not a hospital.
+Quote: Care isn't about doing things for people. It's about making sure they can still do things for themselves.
+
+SECTION: The Outcome
+---
+Label: The Outcome
+Heading: A brand that feels like home.
+Paragraph 1: A warm, distinctive brand that immediately set LM Alltagshilfe apart in a crowded market. New website, print materials, staff uniforms, and vehicle branding -- all speaking the same language of dignified independence.
+
+SECTION: Results
+---
+Label: Impact
+Heading: The numbers behind the narrative.
+Result 1 Number: 45%
+Result 1 Description: Increase in enquiries following the brand relaunch
+Result 2 Number: 5
+Result 2 Description: Week sprint delivery from discovery to complete brand system
+Result 3 Number: 1
+Result 3 Description: Brand that feels like home -- not a hospital
+
+SECTION: Project Navigation
+---
+Previous Project: Radiologie Ahrensburg
+Next Project: Steen Digital
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 6: CASE STUDY -- Steen Digital                                        ##
+##  File: work/steent.html                                                    ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: Steen Digital -- Joniel da Silva
+Meta Description: Brand Sprint for Steen Digital, a Hamburg-based consulting firm specialising in operational transformation. Case study by Joniel da Silva.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Back Link Text: Back to Work
+Sector Label: Consulting . Brand Sprint
+Heading: Steen Digital
+
+SECTION: Meta Fields
+---
+Client: Steen Digital
+Role: Brand Strategist
+Year: 2024
+Scope: Brand Sprint (6 weeks)
+
+SECTION: The Challenge
+---
+Label: The Challenge
+Heading: A consulting firm with sharp thinking trapped inside a forgettable brand.
+Paragraph 1: Steen Digital is a Hamburg-based consulting firm specialising in operational transformation for mid-market companies. The founders -- two ex-McKinsey partners -- had deep expertise but their brand felt like every other consulting firm: blue, corporate, forgettable.
+Paragraph 2: They needed a brand that reflected their contrarian, founder-friendly approach.
+
+SECTION: The Approach
+---
+Label: The Approach
+Heading: Rigour without rigidity.
+Paragraph 1: Through the Brand Sprint, we identified Steen Digital's core tension: [BOLD]rigour without rigidity[/BOLD]. Unlike traditional consultants who impose frameworks, Steen Digital works from within -- embedding with founders to reshape operations from the inside.
+Paragraph 2: The new brand uses bold, architectural typography and a muted earth-tone palette. The visual system conveys structure and precision, but with enough warmth to feel approachable.
+Quote: Strategy without empathy is just a spreadsheet. The brand needed to feel as sharp as their thinking -- and as human as their method.
+
+SECTION: The Outcome
+---
+Label: The Outcome
+Heading: A brand that became a client acquisition tool in itself.
+Paragraph 1: Complete brand overhaul including positioning statement, visual identity, website, pitch materials, and internal templates. The rebrand coincided with a pivot to focus exclusively on founder-led businesses, and the new brand became a client acquisition tool in itself.
+
+SECTION: Results
+---
+Label: Impact
+Heading: The numbers behind the rebrand.
+Result 1 Number: 60%
+Result 1 Description: Increase in qualified leads following the brand relaunch
+Result 2 Number: 6
+Result 2 Description: Week sprint delivery from kickoff to full brand rollout
+Result 3 Number: 3x
+Result 3 Description: Pitch conversion rate post-rebrand compared to previous identity
+
+SECTION: Project Navigation
+---
+Previous Project: LM Alltagshilfe
+Next Project: Decarbonaid
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 7: CASE STUDY -- Decarbonaid                                         ##
+##  File: work/decarbonaid.html                                               ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: Decarbonaid -- Joniel da Silva
+Meta Description: Brand Identity for Decarbonaid, a decarbonization advisory firm. Case study by Joniel da Silva.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Back Link Text: Back to Work
+Sector Label: Decarbonization . Brand Identity
+Heading: Decarbonaid
+
+SECTION: Meta Fields
+---
+Client: Decarbonaid
+Role: Creative Director
+Year: 2024
+Scope: Brand Identity
+
+SECTION: The Challenge
+---
+Label: The Challenge
+Heading: An advisory firm with decades of expertise but no brand to match.
+Paragraph 1: Decarbonaid is a decarbonization advisory firm with decades of experience in strategic and financial corporate management, as well as asset & investment management across numerous industries. Their team had deep expertise in helping companies decarbonise -- but the brand didn't reflect the authority or breadth of what they offered.
+
+SECTION: The Approach
+---
+Label: The Approach
+Heading: Authority rooted in action, not rhetoric.
+Paragraph 1: The creative direction centred on one principle: [BOLD]credibility through clarity[/BOLD]. While most sustainability brands lean into green cliches and aspirational language, Decarbonaid's identity needed to convey real operational expertise -- the kind built over decades, not pitch decks.
+Paragraph 2: The visual system uses a restrained, structured palette and precise typography to communicate strategic rigour. Every element was designed to feel like the brand of advisors who've been in boardrooms -- not a startup chasing trends.
+Quote: Decarbonisation is not a trend -- it's an operational reality. The brand needed to feel like decades of expertise, not a marketing campaign.
+
+SECTION: The Outcome
+---
+Label: The Outcome
+Heading: A brand that signals decades of experience.
+Paragraph 1: A complete brand identity system including logo, visual language, website, and client-facing materials. The new brand positioned Decarbonaid as trusted advisors with the authority to guide companies through complex decarbonisation strategies -- from assessment to implementation.
+
+SECTION: Results
+---
+Label: Impact
+Heading: The numbers behind the transformation.
+Result 1 Number: 3x
+Result 1 Description: Increase in qualified advisory mandates following the rebrand
+Result 2 Number: 3
+Result 2 Description: New industry verticals entered post-rebrand
+Result 3 Number: 1
+Result 3 Description: Unified advisory brand across all client touchpoints
+
+SECTION: Project Navigation
+---
+Previous Project: Steen Digital
+Next Project: Blablador
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##                                                                            ##
+##  PAGE 8: CASE STUDY -- Blablador                                           ##
+##  File: work/blablador.html                                                 ##
+##                                                                            ##
+################################################################################
+
+SECTION: Page Meta
+---
+Page Title: Blablador -- Joniel da Silva
+Meta Description: Visual Identity for Blablador, a Barcelona-based AI startup building conversational AI tools. Case study by Joniel da Silva.
+
+SECTION: Navigation
+---
+Logo Text: Joniel da Silva
+Nav Link 1: Work
+Nav Link 2: Sprint
+Nav Link 3: About
+Nav Link 4: Contact
+
+SECTION: Hero
+---
+Back Link Text: Back to Work
+Sector Label: AI . Visual Identity
+Heading: Blablador
+
+SECTION: Meta Fields
+---
+Client: Blablador
+Role: Creative Director
+Year: 2025
+Scope: Visual Identity
+
+SECTION: The Challenge
+---
+Label: The Challenge
+Heading: A conversational AI brand that needed to find its voice -- visually.
+Paragraph 1: Blablador is a Barcelona-based AI startup building conversational AI tools for the European market, with a focus on trust and privacy. Their name is playful -- a nod to "blah blah," talking -- but their visual identity was all over the place: mismatched icons, inconsistent colours, and a logo that looked like it was made in a free online tool.
+Paragraph 2: They needed a visual system that conveyed both [BOLD]technical sophistication[/BOLD] and the [BOLD]approachable, conversational nature[/BOLD] of their product.
+
+SECTION: The Approach
+---
+Label: The Approach
+Heading: Machine precision meets human conversation.
+Paragraph 1: The visual identity plays on the tension between [BOLD]machine precision[/BOLD] and [BOLD]human conversation[/BOLD]. We developed a custom wordmark that blends geometric letterforms with subtle organic curves -- technically crisp but never cold.
+Paragraph 2: The colour system uses deep indigo as a primary, with electric violet and warm neutrals as accents. A custom illustration language of abstract speech forms and wave patterns creates visual rhythm across all touchpoints.
+Quote: AI brands don't have to look like sci-fi movies. Blablador talks to people -- the brand should feel like a conversation, not a command line.
+
+SECTION: The Outcome
+---
+Label: The Outcome
+Heading: A complete visual system -- from product to brand.
+Paragraph 1: A comprehensive visual identity including logo, colour system, typography guidelines, illustration library, UI component palette, website design, and social media templates. The rebrand launched alongside their Series A announcement and helped position Blablador as the leading conversational AI platform in Latin America.
+
+SECTION: Results
+---
+Label: Impact
+Heading: The numbers behind the rebrand.
+Result 1 Number: Series A
+Result 1 Description: Announcement amplified by rebrand launch timing
+Result 2 Number: 200%
+Result 2 Description: Increase in website engagement post-launch
+Result 3 Number: 1
+Result 3 Description: Visual system spanning product and brand touchpoints
+
+SECTION: Project Navigation
+---
+Previous Project: Decarbonaid
+Next Project: They Fight With Cameras
+
+SECTION: CTA
+---
+Label: Start a Project
+Heading: Ready to give your brand a shape?
+Button Text: Get in Touch
+
+SECTION: Footer
+---
+Footer Logo: Joniel da Silva
+Footer Copyright: (c) 2026 Joniel da Silva. Hamburg, Germany.
+
+
+################################################################################
+##  END OF CONTENT DOCUMENT                                                   ##
+################################################################################

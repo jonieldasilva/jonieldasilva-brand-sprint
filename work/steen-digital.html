@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Steen Digital — Joniel da Silva</title>
+<meta name="description" content="Brand Sprint for Steen Digital, a Hamburg-based consulting firm specialising in operational transformation. Case study by Joniel da Silva." />
+<meta name="theme-color" content="#000000" />
+<style>
+/* ═══════════════════════════════════════════════
+   JONIEL DA SILVA — BAUHAUS DARK MODERNIST
+   Case Study Page
+   ═══════════════════════════════════════════════ */
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Dark Bauhaus palette */
+  --black:      #000000;
+  --white:      #FFFFFF;
+  --dark-bg:    #0A0A0A;
+  --dark-card:  #141414;
+  --gray-dark:  #1F1F1F;
+  --gray-mid:   #666666;
+  --gray-light: #999999;
+  --accent:     #D32F2F;
+
+  --futura: 'Futura', 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif;
+
+  --unit: 8px;
+  --grid-gap: calc(var(--unit) * 3);
+  --nav-h: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--futura);
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: var(--nav-h);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+.nav-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: calc(var(--unit) * 5);
+  justify-content: center;
+}
+.nav-links a {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-light);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-cta {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--white);
+  padding: calc(var(--unit) * 2) calc(var(--unit) * 4);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.nav-toggle {
+  display: none;
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 700;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: calc(var(--unit) * 2) calc(var(--unit) * 3);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-toggle:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* Mobile overlay menu */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background: var(--dark-bg);
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-overlay.active {
+  transform: translateX(0);
+}
+.nav-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.nav-overlay-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--unit) * 3) var(--grid-gap);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-overlay-close {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 700;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: calc(var(--unit) * 2) calc(var(--unit) * 3);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-overlay-close:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.nav-overlay-links {
+  list-style: none;
+  padding: calc(var(--unit) * 6) var(--grid-gap);
+}
+.nav-overlay-links li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-overlay-links a {
+  display: block;
+  font-family: var(--futura);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  padding: calc(var(--unit) * 3) 0;
+  transition: color 0.2s, padding-left 0.2s;
+}
+.nav-overlay-links a:hover {
+  color: var(--accent);
+  padding-left: calc(var(--unit) * 2);
+}
+.nav-overlay-cta {
+  margin: 0 var(--grid-gap) calc(var(--unit) * 4);
+}
+.nav-overlay-cta a {
+  display: block;
+  text-align: center;
+  font-family: var(--futura);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--white);
+  padding: calc(var(--unit) * 3) calc(var(--unit) * 4);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-overlay-cta a:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* ─── CASE STUDY HERO ─── */
+.case-hero {
+  padding-top: calc(var(--nav-h) + calc(var(--unit) * 8));
+  padding-bottom: calc(var(--unit) * 8);
+  background: var(--black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.case-hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+}
+.back-link {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-light);
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--unit));
+  margin-bottom: calc(var(--unit) * 4);
+  transition: color 0.2s, gap 0.2s;
+}
+.back-link::before {
+  content: '←';
+  font-size: 1.125rem;
+}
+.back-link:hover {
+  color: var(--accent);
+  gap: calc(var(--unit) * 2);
+}
+.case-sector {
+  font-family: var(--futura);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gray-mid);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.case-hero h1 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  max-width: 900px;
+}
+
+/* ─── META FIELDS ─── */
+.meta-section {
+  padding: calc(var(--unit) * 10) 0;
+  background: var(--dark-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.meta-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.meta-item {
+  background: var(--dark-card);
+  padding: calc(var(--unit) * 4);
+}
+.meta-label {
+  font-family: var(--futura);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gray-mid);
+  margin-bottom: calc(var(--unit) * 2);
+}
+.meta-value {
+  font-family: var(--futura);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+/* ─── CONTENT SECTION ─── */
+.content-section {
+  padding: calc(var(--unit) * 12) 0;
+  background: var(--black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.content-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: calc(var(--unit) * 10);
+}
+.content-label {
+  font-family: var(--futura);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gray-mid);
+}
+.content-main h2 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: calc(var(--unit) * 5);
+  max-width: 700px;
+}
+.content-main p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray-light);
+  margin-bottom: calc(var(--unit) * 3);
+  max-width: 700px;
+  text-transform: none;
+}
+.content-main p em {
+  font-style: italic;
+}
+.content-main p strong {
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* ─── QUOTE ─── */
+.quote-section {
+  padding: calc(var(--unit) * 12) 0;
+  background: var(--dark-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.quote-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  text-align: center;
+}
+.quote-text {
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+/* ─── RESULTS ─── */
+.results-section {
+  padding: calc(var(--unit) * 12) 0;
+  background: var(--black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.results-header {
+  max-width: 1280px;
+  margin: 0 auto calc(var(--unit) * 8);
+  padding: 0 var(--grid-gap);
+}
+.results-label {
+  font-family: var(--futura);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gray-mid);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.results-header h2 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.results-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.result-card {
+  background: var(--dark-card);
+  padding: calc(var(--unit) * 6);
+  text-align: center;
+}
+.result-number {
+  font-family: var(--futura);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.result-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--gray-light);
+  text-transform: none;
+}
+
+/* ─── PROJECT NAV ─── */
+.project-nav {
+  padding: calc(var(--unit) * 8) 0;
+  background: var(--dark-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.project-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(var(--unit) * 4);
+}
+.project-nav-link {
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-light);
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--unit));
+  transition: color 0.2s, gap 0.2s;
+}
+.project-nav-prev::before {
+  content: '←';
+  font-size: 1.125rem;
+}
+.project-nav-next::after {
+  content: '→';
+  font-size: 1.125rem;
+}
+.project-nav-link:hover {
+  color: var(--accent);
+}
+.project-nav-prev:hover {
+  gap: calc(var(--unit) * 2);
+}
+.project-nav-next:hover {
+  gap: calc(var(--unit) * 2);
+}
+.project-nav-disabled {
+  color: var(--gray-dark);
+  pointer-events: none;
+}
+
+/* ─── CTA SECTION ─── */
+.cta-section {
+  background: var(--accent);
+  color: var(--white);
+  padding: calc(var(--unit) * 15) var(--grid-gap);
+  text-align: center;
+}
+.cta-label {
+  font-family: var(--futura);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: calc(var(--unit) * 3);
+}
+.cta-section h2 {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin: 0 auto calc(var(--unit) * 6);
+  max-width: 800px;
+}
+.btn-white {
+  display: inline-block;
+  font-family: var(--futura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--white);
+  padding: calc(var(--unit) * 2.5) calc(var(--unit) * 5);
+  transition: background 0.2s, color 0.2s;
+}
+.btn-white:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--black);
+  padding: calc(var(--unit) * 4) var(--grid-gap);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  font-family: var(--futura);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+.footer-copy {
+  font-size: 0.875rem;
+  color: var(--gray-mid);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .content-inner {
+    grid-template-columns: 1fr;
+    gap: calc(var(--unit) * 4);
+  }
+  .meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+
+  .nav-inner {
+    grid-template-columns: 1fr auto;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-nav-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: calc(var(--unit) * 2);
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Joniel da Silva</a>
+    <ul class="nav-links">
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/#sprint">Sprint</a></li>
+      <li><a href="/#about">About</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Contact</a>
+    <button class="nav-toggle" aria-label="Open menu" id="menuToggle">Menu</button>
+  </div>
+</nav>
+
+<!-- ═══ MOBILE OVERLAY MENU ═══ -->
+<div class="nav-overlay-backdrop" id="menuBackdrop"></div>
+<div class="nav-overlay" id="menuOverlay">
+  <div class="nav-overlay-header">
+    <span class="nav-logo">Joniel da Silva</span>
+    <button class="nav-overlay-close" aria-label="Close menu" id="menuClose">Close</button>
+  </div>
+  <ul class="nav-overlay-links">
+    <li><a href="/work/" class="menu-link">Work</a></li>
+    <li><a href="/#sprint" class="menu-link">Sprint</a></li>
+    <li><a href="/#about" class="menu-link">About</a></li>
+  </ul>
+  <div class="nav-overlay-cta">
+    <a href="/#contact" class="menu-link">Contact</a>
+  </div>
+</div>
+
+<!-- ═══ CASE HERO ═══ -->
+<header class="case-hero">
+  <div class="case-hero-inner">
+    <a href="/work/" class="back-link">Back to Work</a>
+    <p class="case-sector">Consulting . Brand Sprint</p>
+    <h1>Steen Digital</h1>
+  </div>
+</header>
+
+<!-- ═══ META FIELDS ═══ -->
+<section class="meta-section">
+  <div class="meta-grid">
+    <div class="meta-item">
+      <p class="meta-label">Client</p>
+      <p class="meta-value">Steen Digital</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Role</p>
+      <p class="meta-value">Brand Strategist</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Year</p>
+      <p class="meta-value">2024</p>
+    </div>
+    <div class="meta-item">
+      <p class="meta-label">Scope</p>
+      <p class="meta-value">Brand Sprint (6 weeks)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE CHALLENGE ═══ -->
+<section class="content-section">
+  <div class="content-inner">
+    <div>
+      <p class="content-label">The Challenge</p>
+    </div>
+    <div class="content-main">
+      <h2>A consulting firm with sharp thinking trapped inside a forgettable brand.</h2>
+      <p>Steen Digital is a Hamburg-based consulting firm specialising in operational transformation for mid-market companies. The founders — two ex-McKinsey partners — had deep expertise but their brand felt like every other consulting firm: blue, corporate, forgettable.</p>
+      <p>They needed a brand that reflected their contrarian, founder-friendly approach.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE APPROACH ═══ -->
+<section class="content-section">
+  <div class="content-inner">
+    <div>
+      <p class="content-label">The Approach</p>
+    </div>
+    <div class="content-main">
+      <h2>Rigour without rigidity.</h2>
+      <p>Through the Brand Sprint, we identified Steen Digital's core tension: <strong>rigour without rigidity</strong>. Unlike traditional consultants who impose frameworks, Steen Digital works from within — embedding with founders to reshape operations from the inside.</p>
+      <p>The new brand uses bold, architectural typography and a muted earth-tone palette. The visual system conveys structure and precision, but with enough warmth to feel approachable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══ -->
+<section class="quote-section">
+  <div class="quote-inner">
+    <p class="quote-text">Strategy without empathy is just a spreadsheet. The brand needed to feel as sharp as their thinking — and as human as their method.</p>
+  </div>
+</section>
+
+<!-- ═══ THE OUTCOME ═══ -->
+<section class="content-section">
+  <div class="content-inner">
+    <div>
+      <p class="content-label">The Outcome</p>
+    </div>
+    <div class="content-main">
+      <h2>A brand that became a client acquisition tool in itself.</h2>
+      <p>Complete brand overhaul including positioning statement, visual identity, website, pitch materials, and internal templates. The rebrand coincided with a pivot to focus exclusively on founder-led businesses, and the new brand became a client acquisition tool in itself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTS ═══ -->
+<section class="results-section">
+  <div class="results-header">
+    <p class="results-label">Impact</p>
+    <h2>The numbers behind the rebrand.</h2>
+  </div>
+  <div class="results-grid">
+    <div class="result-card">
+      <p class="result-number">60%</p>
+      <p class="result-desc">Increase in qualified leads following the brand relaunch</p>
+    </div>
+    <div class="result-card">
+      <p class="result-number">6</p>
+      <p class="result-desc">Week sprint delivery from kickoff to full brand rollout</p>
+    </div>
+    <div class="result-card">
+      <p class="result-number">3x</p>
+      <p class="result-desc">Pitch conversion rate post-rebrand compared to previous identity</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECT NAVIGATION ═══ -->
+<section class="project-nav">
+  <div class="project-nav-inner">
+    <a href="lm-alltagshilfe.html" class="project-nav-link project-nav-prev">LM Alltagshilfe</a>
+    <a href="decarbonaid.html" class="project-nav-link project-nav-next">Decarbonaid</a>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+  <p class="cta-label">Start a Project</p>
+  <h2>Ready to give your brand a shape?</h2>
+  <a href="/#contact" class="btn-white">Get in Touch</a>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Joniel da Silva</span>
+    <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // Mobile menu elements
+  const menuToggle = document.getElementById('menuToggle');
+  const menuClose = document.getElementById('menuClose');
+  const menuOverlay = document.getElementById('menuOverlay');
+  const menuBackdrop = document.getElementById('menuBackdrop');
+  const menuLinks = document.querySelectorAll('.menu-link');
+
+  // Open menu
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+      menuOverlay.classList.add('active');
+      menuBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  // Close menu function
+  function closeMenu() {
+    menuOverlay.classList.remove('active');
+    menuBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Close menu on close button
+  if (menuClose) {
+    menuClose.addEventListener('click', closeMenu);
+  }
+
+  // Close menu on backdrop click
+  if (menuBackdrop) {
+    menuBackdrop.addEventListener('click', closeMenu);
+  }
+
+  // Close menu on link click
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+})();
+</script>
+</body>
+</html>

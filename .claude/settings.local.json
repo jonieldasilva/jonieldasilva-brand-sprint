@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__c166ac71-f46d-49c5-9ec5-a3339e2264b7__get-netlify-coding-context",
+      "mcp__c166ac71-f46d-49c5-9ec5-a3339e2264b7__netlify-user-services-reader",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(brew list:*)"
+    ]
+  }
+}
