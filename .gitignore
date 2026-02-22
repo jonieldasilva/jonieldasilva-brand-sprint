@@ -1,2 +1,7 @@
-# Local Netlify folder
-.netlify
+.DS_Store
+files/
+files.zip
+*.zip
+.netlify/
+JDS_Website_Audit.md
+img/projects/*.png
