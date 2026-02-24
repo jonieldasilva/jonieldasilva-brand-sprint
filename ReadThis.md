@@ -155,4 +155,4 @@ These require Joniel's input. They are strategic/content decisions, not technica
 - **Image naming convention matters** — project images follow `[project-slug]-[width].jpg`. New images should follow the same pattern with a srcset at 640, 960, and 1280 widths.
 - **Cache-bust CSS** when making visible style changes — update the `?v=` query string on the relevant `<link>` tag.
 - **Don't commit unless asked** — the owner commits manually after reviewing changes.
-- **Netlify auto-deploys from GitHub** — pushing to `master` triggers a live deploy.
+- **Netlify does NOT auto-deploy from GitHub** — the site is deployed via the Netlify CLI. After committing and pushing to git, run `netlify deploy --prod` from the project root to go live. Git push alone does nothing to the live site.
