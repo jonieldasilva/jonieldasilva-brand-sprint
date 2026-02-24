@@ -136,6 +136,30 @@ A full site audit (`JDS_Website_Audit.md`) was conducted, then the following wer
 
 ---
 
+## Next Tasks (Active Todo List)
+
+### Case Studies — All 6 Are Work in Progress
+
+Each case study needs the following. Work through them one at a time.
+
+#### Per-case checklist
+- [ ] **Hero image alt text** — currently all read `alt="[Client] placeholder image"`. Replace with a real descriptive alt text once final images are confirmed.
+- [ ] **Pull quote** — currently written in Joniel's voice as design philosophy (unattributed). Replace with a real client quote, properly attributed (name, title, company).
+- [ ] **Results metrics** — some are strong numbers; some are not real metrics (e.g. "1 Unified visual system"). Review and replace weak entries with actual measurable outcomes.
+- [ ] **Client name/founder details** — some cases reference "the founder" or "two ex-McKinsey partners" without naming them. Confirm whether names should be included.
+
+#### Case-by-case status
+| Case Study | Hero alt | Client quote | Metrics review | Notes |
+|---|---|---|---|---|
+| Blablador | ❌ placeholder | ❌ unattributed | ⚠️ "1 Visual system" not a metric | Described as Barcelona-based in meta, Jülich in body — verify |
+| Radiologie Ahrensburg | ❌ placeholder | ❌ unattributed | ✅ solid numbers | — |
+| LM Alltagshilfe | ❌ placeholder | ❌ unattributed | ⚠️ "1 Brand that feels like home" not a metric | Founder named as Lisa Mueller — confirm this is correct |
+| Steen Digital | ❌ placeholder | ❌ unattributed | ✅ solid numbers | Founders unnamed ("two ex-McKinsey partners") — confirm |
+| Decarbonaid | ❌ placeholder | ❌ unattributed | ⚠️ "1 Unified advisory brand" not a metric | — |
+| They Fight With Cameras | ❌ placeholder | ❌ unattributed | ✅ solid numbers | Status: "In Production" — update when released |
+
+---
+
 ## Open Issues (Needs Owner's Content — Cannot Be Resolved by AI)
 
 These require Joniel's input. They are strategic/content decisions, not technical fixes:
