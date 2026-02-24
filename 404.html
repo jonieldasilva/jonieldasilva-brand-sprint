@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found — Joniel da Silva</title>
+<meta name="description" content="The page you're looking for doesn't exist." />
+<meta name="theme-color" content="#000000" />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="/assets/work-case.css" />
+<style>
+  .not-found {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  .not-found-inner {
+    max-width: 560px;
+    text-align: center;
+  }
+  .not-found-code {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--c-mid, #888);
+    margin-bottom: 1.5rem;
+  }
+  .not-found-inner h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  .not-found-inner p {
+    font-size: 1.05rem;
+    color: var(--c-mid, #888);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .not-found-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-outline-white {
+    display: inline-block;
+    font-family: var(--futura);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: calc(var(--unit) * 2.5) calc(var(--unit) * 5);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline-white:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Joniel da Silva</a>
+    <ul class="nav-links">
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/#sprint">Sprint</a></li>
+      <li><a href="/#about">About</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Contact</a>
+    <button class="nav-toggle" aria-label="Open menu" id="menuToggle" aria-expanded="false" aria-controls="menuOverlay">Menu</button>
+  </div>
+</nav>
+
+<!-- ═══ MOBILE OVERLAY MENU ═══ -->
+<div class="nav-overlay-backdrop" id="menuBackdrop"></div>
+<div class="nav-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true" tabindex="-1">
+  <div class="nav-overlay-header">
+    <span class="nav-logo">Joniel da Silva</span>
+    <button class="nav-overlay-close" aria-label="Close menu" id="menuClose">Close</button>
+  </div>
+  <ul class="nav-overlay-links">
+    <li><a href="/work/" class="menu-link">Work</a></li>
+    <li><a href="/#sprint" class="menu-link">Sprint</a></li>
+    <li><a href="/#about" class="menu-link">About</a></li>
+  </ul>
+  <div class="nav-overlay-cta">
+    <a href="/#contact" class="menu-link">Contact</a>
+  </div>
+</div>
+
+<!-- ═══ 404 ═══ -->
+<main class="not-found">
+  <div class="not-found-inner">
+    <p class="not-found-code">404 — Page Not Found</p>
+    <h1>This page lost its shape.</h1>
+    <p>The link may be broken, or the page may have moved. Either way, let's get you back to something solid.</p>
+    <div class="not-found-actions">
+      <a href="/" class="btn-white">Go to Homepage</a>
+      <a href="/work/" class="btn-outline-white">View Work</a>
+    </div>
+  </div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Joniel da Silva</span>
+    <div class="footer-links">
+      <a href="/imprint.html">Imprint</a>
+      <a href="/data-policy.html">Data Policy</a>
+    </div>
+    <span class="footer-copy">© 2026 Joniel da Silva. Hamburg, Germany.</span>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
