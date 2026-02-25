@@ -6,7 +6,7 @@ headers = []
 [functions."*"]
 
 [build]
-publish = "/Volumes/Local/Claude/JDS"
+publish = "/Users/jonieldasilva/Local/Claude/JDS"
 publishOrigin = "default"
 
 [build.environment]
@@ -98,6 +98,18 @@ force = false
 [[redirects]]
 from = "/work/blablador"
 to = "/work/blablador.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/work/qatar-airways"
+to = "/work/qatar-airways.html"
 status = 200.0
 force = false
 
