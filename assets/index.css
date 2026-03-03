@@ -84,6 +84,13 @@ img { display: block; max-width: 100%; }
   font-size: 1rem;
   letter-spacing: 0.05em;
   color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  display: block;
+  width: 36px;
+  height: 36px;
 }
 .nav-links {
   list-style: none;
@@ -804,6 +811,13 @@ img { display: block; max-width: 100%; }
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.footer-logo img {
+  display: block;
+  width: 28px;
+  height: 28px;
 }
 .footer-links {
   display: flex;
