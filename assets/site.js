@@ -125,6 +125,22 @@
     tick();
   })();
 
+  // Shuffle client logos on each page load
+  (function() {
+    const rows = document.querySelectorAll('.clients-row');
+    if (rows.length < 1) return;
+    const primary = rows[0];
+    const logos = Array.from(primary.children);
+    for (let i = logos.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      primary.appendChild(logos[j]);
+      logos.splice(j, 1);
+    }
+    if (rows[1]) {
+      rows[1].innerHTML = primary.innerHTML;
+    }
+  })();
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
