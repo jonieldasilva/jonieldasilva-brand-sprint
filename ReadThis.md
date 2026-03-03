@@ -134,6 +134,37 @@ A full site audit (`JDS_Website_Audit.md`) was conducted, then the following wer
 - `img/projects/steen-digital.jpg` — deleted (pre-existing)
 - `404.html` — new file (untracked)
 
+### Session 9 — Case Expansion & Rollout (Feb 25, 2026)
+Case content and routing were expanded, aligned to verified inputs, committed to GitHub, and deployed to production.
+
+**Key updates completed:**
+- Added new case page: `work/qatar-airways.html` (kept unlinked from homepage/work index for now)
+- Added clean URL routing for Qatar case:
+  - `_redirects`: `/work/qatar-airways -> /work/qatar-airways.html`
+  - `.netlify/netlify.toml`: matching redirect entry
+- Updated case content based on `case.md` progress:
+  - `work/steen-digital.html` rewritten with verified narrative (first Brand Sprint method case, 2025)
+  - `work/decarbonaid.html` updated with verified scope/role/year and qualitative impact
+  - `work/qatar-airways.html` updated with 2016–2017, scope, image/video placeholders
+- Added visible in-page visual placeholders to active case pages so assets can be swapped directly:
+  - `work/radiologie-ahrensburg.html`
+  - `work/lm-alltagshilfe.html`
+  - `work/steen-digital.html`
+  - `work/they-fight-with-cameras.html`
+  - (Qatar includes live image/video placeholders)
+- Archived Blablador from featured listings while keeping direct URL access:
+  - Removed from `index.html`
+  - Removed from `work/index.html`
+  - Removed from `sitemap.xml`
+  - Left `work/blablador.html` intact
+- Updated manuscript tracker: `case.md` (expanded with Decarbonaid, Qatar, Steen status and asset checklists)
+
+**Release operations completed:**
+- Commit created and pushed: `4395f6d`
+- GitHub updated: `origin/master`
+- Netlify production deploy completed successfully
+- Live URL: `https://jonieldasilva-brand.netlify.app`
+
 ---
 
 ## Next Tasks (Active Todo List)
