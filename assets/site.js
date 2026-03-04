@@ -166,35 +166,58 @@
     });
   })();
 
-  // Scroll reveal
+  // Scroll reveal — global automatic system
+  // Any content element on any page is animated unless it lives inside an excluded container.
+  // No per-page configuration needed: just add elements to the DOM and they animate.
   (function() {
     if (typeof IntersectionObserver === 'undefined') return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    var selectors = [
-      '.section-header > .section-number',
-      '.section-header > .section-title',
-      '.section-header > .section-desc',
-      '.service-card',
-      '.sprint-desc',
-      '.sprint .btn-primary',
-      '.phase',
-      '.work-header > div',
-      '.work-header > .btn-outline',
-      '.work-card',
-      '.clients .section-number',
-      '.clients-flow',
-      '.about-img',
-      '.about-content',
-      '.film-visual',
-      '.film-content',
-      '.contact > .section-number',
-      '.contact > .section-title',
-      '.contact > .contact-desc',
-      '.contact > .contact-actions',
-    ];
+    // Containers whose descendants must never animate
+    var EXCLUDED_SELECTORS = '.nav, .nav-inner, .nav-overlay, .nav-overlay-backdrop, .hero, .footer, .clients-track, .clients-row';
 
-    var elements = Array.from(document.querySelectorAll(selectors.join(', ')));
+    var excludedRoots = Array.from(document.querySelectorAll(EXCLUDED_SELECTORS));
+
+    function isExcluded(el) {
+      for (var i = 0; i < excludedRoots.length; i++) {
+        if (excludedRoots[i].contains(el)) return true;
+      }
+      return false;
+    }
+
+    // Broad content selectors — covers any typical component on any page
+    var SELECTORS = [
+      'h2', 'h3', 'h4',
+      'p',
+      'img:not([aria-hidden="true"])',
+      'a[class*="btn"]', '[class*="btn-"]',
+      '[class*="card"]',
+      '[class*="phase"]',
+      '[class*="meta-item"]',
+      '[class*="-visual"]',
+      '[class*="-content"]',
+      '[class*="-img"]',
+      '[class*="-flow"]',
+      '[class*="-actions"]',
+      '[class*="-tags"]',
+      '.section-number',
+      '.work-header > *',
+    ].join(', ');
+
+    var elements = Array.from(document.querySelectorAll(SELECTORS))
+      .filter(function(el) { return !isExcluded(el); });
+
+    // If an ancestor is already in the animated set, skip the child
+    // (prevents double-animation of container + its inner elements)
+    var elementSet = new Set(elements);
+    elements = elements.filter(function(el) {
+      var node = el.parentElement;
+      while (node) {
+        if (elementSet.has(node)) return false;
+        node = node.parentElement;
+      }
+      return true;
+    });
 
     // Group siblings by shared parent, assign stagger delays in DOM order
     var groups = new Map();
