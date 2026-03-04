@@ -141,6 +141,31 @@
     }
   })();
 
+  // Hero content reveal on page load
+  (function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // Order: headline → eyebrow → body → CTA
+    var heroEls = [
+      document.querySelector('h1'),
+      document.querySelector('.hero-tag'),
+      document.querySelector('.hero-sub'),
+      document.querySelector('.hero-cta'),
+    ].filter(Boolean);
+
+    heroEls.forEach(function(el, i) {
+      el.style.transitionDelay = (200 + i * 120) + 'ms';
+      el.classList.add('reveal');
+    });
+
+    // Double rAF ensures initial hidden state is painted before transition starts
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        heroEls.forEach(function(el) { el.classList.add('visible'); });
+      });
+    });
+  })();
+
   // Scroll reveal
   (function() {
     if (typeof IntersectionObserver === 'undefined') return;
@@ -180,7 +205,7 @@
     });
     groups.forEach(function(siblings) {
       siblings.forEach(function(el, i) {
-        el.style.transitionDelay = (i * 70) + 'ms';
+        el.style.transitionDelay = (i * 100) + 'ms';
       });
     });
 
