@@ -141,6 +141,63 @@
     }
   })();
 
+  // Scroll reveal
+  (function() {
+    if (typeof IntersectionObserver === 'undefined') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var selectors = [
+      '.section-header > .section-number',
+      '.section-header > .section-title',
+      '.section-header > .section-desc',
+      '.service-card',
+      '.sprint-desc',
+      '.sprint .btn-primary',
+      '.phase',
+      '.work-header > div',
+      '.work-header > .btn-outline',
+      '.work-card',
+      '.clients .section-number',
+      '.clients-flow',
+      '.about-img',
+      '.about-content',
+      '.film-visual',
+      '.film-content',
+      '.contact > .section-number',
+      '.contact > .section-title',
+      '.contact > .contact-desc',
+      '.contact > .contact-actions',
+    ];
+
+    var elements = Array.from(document.querySelectorAll(selectors.join(', ')));
+
+    // Group siblings by shared parent, assign stagger delays in DOM order
+    var groups = new Map();
+    elements.forEach(function(el) {
+      var p = el.parentElement;
+      if (!groups.has(p)) groups.set(p, []);
+      groups.get(p).push(el);
+    });
+    groups.forEach(function(siblings) {
+      siblings.forEach(function(el, i) {
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+    });
+
+    elements.forEach(function(el) { el.classList.add('reveal'); });
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    elements.forEach(function(el) { observer.observe(el); });
+  })();
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
