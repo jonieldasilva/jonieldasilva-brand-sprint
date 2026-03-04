@@ -628,3 +628,18 @@ img { display: block; max-width: 100%; }
     text-align: center;
   }
 }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 900ms cubic-bezier(0.25, 1, 0.4, 1),
+              transform 900ms cubic-bezier(0.25, 1, 0.4, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
