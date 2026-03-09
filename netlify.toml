@@ -1,0 +1,42 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/work/they-fight-with-cameras"
+  to = "/work/they-fight-with-cameras.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/radiologie-ahrensburg"
+  to = "/work/radiologie-ahrensburg.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/lm-alltagshilfe"
+  to = "/work/lm-alltagshilfe.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/steen-digital"
+  to = "/work/steen-digital.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/steent"
+  to = "/work/steen-digital.html"
+  status = 301
+
+[[redirects]]
+  from = "/work/decarbonaid"
+  to = "/work/decarbonaid.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/blablador"
+  to = "/work/blablador.html"
+  status = 200
+
+[[redirects]]
+  from = "/work/qatar-airways"
+  to = "/work/qatar-airways.html"
+  status = 200
